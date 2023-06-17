@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    font-family: 'PT Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 32px;
+    color: #002C30;
+}
+h2 {
+    font-weight: bold;
+    font-size: 24px;
+    color: #002C30;
+}
+h3 {
+    font-weight: 400;
+    font-size: 16px;
+    color: #002C30;
+}
+
+a {
+    font-family: 'PT Sans', sans-serif;
+    text-decoration: none;
+    color: #BCFFDB;
+}
+
+ul {
+    display: flex;
+}
+
+
+/* 
+
+
+NAV
+
+
+*/
+
+nav {
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav__links {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 400px;
+    margin: 18px;
+    margin-bottom: 50px;
+}
+
+.nav__link {
+    font-weight: bold;
+    font-size: 20px;
+    height: 250px;
+    border-radius: 10px;
+    background-color: #205D34;
+    color: #E7FFF2;
+    padding: 40px 12px ;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    translate: 0 -85px;
+    transition: all 100ms  ease;
+
+}
+
+.nav__link:hover  {
+    scale: 1.2;
+    border: #BCFFDB 3px solid;
+    box-shadow: 0 0 10px 5px #49d68b;
+    text-shadow: #49d68b 0 0 10px;
+}
+
+.nav__logo {
+    margin: 36px;
+    height: 150px;
+    border-radius: 10px;
+    background-color: #205D34;
+    color: #E7FFF2;
+    padding: 40px 12px ;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    translate: 0 -50px;
+    transition: all 100ms  ease;
+}
+
+.nav__logo:hover {
+    translate: 0 -50px;
+    scale: 1.2;
+    border: #BCFFDB 3px solid;
+    box-shadow: 0 0 10px 5px #49d68b;
+    content: url(./assets/m2\ logo\ white.png);
+    cursor: pointer;
+}
+
+
+/* 
+
+
+HEADER
+
+
+*/
+
+
+body {
+    min-height: calc(100vh - 100px);
+    background-image: url("./assets/chickfila-slider12.png");
+    background-size: 100vw;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 56px;
+
+}
+
+.header__title {
+    color: #E7FFF2;
+    text-align: center;
+    margin-bottom: 56px;
+    text-shadow: 2px 2px 30px rgb(0, 0, 0, 0.8);
+}
+
+.header__subtitle {
+    color: #E7FFF2;
+    text-align: center;
+    text-shadow: rgba(0, 0, 0, 0.8) 0px 0px 10px;
+    margin-bottom: 750px;
+}
+
+.down {
+    font-size: 40px;
+    color: #205D34;
+    position: absolute;
+    left: 50%;
+    bottom: 40px;
+    animation: arrow 1s infinite alternate-reverse;
+}
+
+.down:hover {
+    scale: 1.2;
+    color: #205D34;
+    text-shadow: #49d68b 0 0 10px;
+}
+
+@keyframes arrow {
+    0% {
+        transform: translateY(20px);
+      }
+    
+      100% {
+        transform: translateY(0px);
+      }
+}
+
+/* 
+
+
+
+stores
+
+
+
+*/
+
+
+#stores {
+    background-color: #cefbe3;
+    min-height: 120vh;
+    position: relative;
+}
+
+
+.plane__img {
+    width: 99vw;
+}
+
+.plane__stores {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    top: 50%;
+    left: 23%;
+}
+
+.plane__store {
+    max-height: 125px;
+    border: #205D34 7px solid;
+    border-radius: 40%;
+    margin-right: 80px;
+}
+
+.plane {
+    animation: plane 1s ease-in;
+}
+
+@keyframes plane {
+    0% {
+        transform: translateX(1900px);
+      }
+    
+    100% {
+        transform: translateX(0px);
+      }
+}
