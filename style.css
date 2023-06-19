@@ -82,11 +82,13 @@ nav {
   height: 100px;
   width: 100%;
   max-width: 1500px;
+  margin: 0 auto;
   display: flex;
   flex-direction: row-reverse;
-  justify-content: space-between;
+  justify-content: center;
   background-color: #ffffff;
   margin: 0 auto;
+  position: relative;
 }
 
 li {
@@ -98,10 +100,10 @@ li {
 .nav__links {
   display: flex;
   position: fixed;
-  left: 37%;
+  left: 2%;
   justify-content: space-between;
   width: 100%;
-  max-width: 400px;
+  max-width: 700px;
   margin: 18px;
   margin-bottom: 50px;
   z-index: 10;
@@ -119,7 +121,6 @@ li {
   justify-content: end;
   translate: 0 -80px;
   transition: all 100ms ease;
-  margin-right: 36px;
 }
 
 .nav__link:hover {
@@ -193,7 +194,7 @@ HEADER
 
 body {
   min-height: calc(100vh - 100px);
-  background-size: 100vw;
+  background-size: 95vw;
   background-color: #ffffff;
   background-image: url("./assets/background\ img.png");
 
