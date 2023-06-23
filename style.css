@@ -184,15 +184,12 @@ HEADER
   height: 95vh;
   transition: all 1000ms ease;
   /* background-image: url(./assets/background\ img.png); */
-
 }
 
 .hide {
   translate: 0 95%;
   opacity: 0;
 }
-
-
 
 .header__text {
   padding: 30px 56px 56px 56px;
@@ -206,7 +203,7 @@ HEADER
   align-items: center;
   flex-direction: column;
   position: absolute;
-  top: 200px
+  top: 200px;
 }
 
 body {
@@ -341,16 +338,13 @@ stores
   transition: all 1000ms ease 500ms;
   top: -700px;
   left: 0%;
-
 }
-
 
 .hide__plane {
   translate: 350px 700px;
-
 }
 
-.hide__plane #plane__img{
+.hide__plane #plane__img {
   scale: 2;
 }
 
@@ -365,17 +359,15 @@ stores
 #plane__stores {
   position: absolute;
   display: flex;
-  translate: 102% 300% ;
+  translate: 102% 300%;
   opacity: 1;
   z-index: 2;
   transform-origin: top;
-
 }
 
 .hide__stores {
   opacity: 0;
   transition: all 2500ms ease 500ms;
-
 }
 
 .plane__store {
@@ -385,7 +377,6 @@ stores
   border-radius: 40%;
   margin-right: 50px;
   transition: all 300ms ease;
-
 }
 
 .plane {
@@ -394,7 +385,6 @@ stores
   opacity: 1;
   translate: -100px 0;
   animation: plane 1s ease-in-out infinite alternate-reverse;
-
 }
 
 .plane__store:hover {
@@ -408,5 +398,47 @@ stores
 
   100% {
     transform: translateY(0px);
+  }
+}
+
+@media (max-width: 1500px) {
+  #plane__img {
+    translate: 1300px 75px;
+  }
+
+  .plane__store {
+    max-height: 100px;
+    margin-right: 10px;
+    translate: -20px 100px;
+  }
+}
+
+@media (max-width: 1300px) {
+  #plane__img {
+    translate: 1100px 75px;
+  }
+
+  .plane__store {
+    max-height: 90px;
+    margin-right: 10px;
+    translate: -100px 100px;
+  }
+
+  @media (max-width: 1100px) {
+    #plane__img {
+      translate: 825px 75px;
+    }
+
+    .plane__store {
+      max-height: 63px;
+      margin-right: 5px;
+      translate: -125px 125px;
+    }
+
+    @media (max-height: 800px) {
+      .header__sign {
+        translate: 0 170px;
+      }
+    }
   }
 }
