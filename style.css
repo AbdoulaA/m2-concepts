@@ -192,9 +192,9 @@ HEADER
 }
 
 .header__text {
-  padding: 30px 56px 56px 56px;
+  padding: 30px 30px 30px 30px;
   border: white 10px solid;
-  max-height: 50vh;
+  max-height: 400px;
   max-width: 70vw;
   background-color: #053ca0;
   border-radius: 25px;
@@ -203,7 +203,8 @@ HEADER
   align-items: center;
   flex-direction: column;
   position: absolute;
-  top: 200px;
+  top: 250px;
+  left: 200px;
 }
 
 body {
@@ -213,21 +214,11 @@ body {
   position: relative;
 }
 
-.header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 56px;
-  background-color: #053ca0;
-  border-radius: 0 25px 25px 0px;
-  translate: -110px 0px;
-  position: absolute;
-  opacity: 1;
-}
-
-.header__container {
-  translate: -100px 0;
+.logo__img {
+  translate: 43vw 20px;
+  width: 100%;
+  max-width: 200px;
+  z-index: 10;
 }
 
 .header__title {
@@ -251,7 +242,7 @@ body {
   color: #042e7b;
   position: absolute;
   left: 50%;
-  bottom: 5%;
+  bottom: 13%;
   animation: arrow 1s infinite alternate-reverse;
   z-index: 2;
   rotate: 90deg;
@@ -266,15 +257,17 @@ body {
 
 .header__sign {
   position: fixed;
-  max-width: 500px;
+  max-width: 300px;
+  width: 100%;
   z-index: 2;
   bottom: -10%;
-  right: 0%;
+  left: 0%;
+  translate: 65vw -89vh;
+
 }
 
 .header__sign--img {
-  min-height: 90vh;
-  translate: 0 -70px;
+  max-width: 550px;
   margin-top: 36px;
 }
 
@@ -300,16 +293,17 @@ body {
 .header__sign--logos {
   position: absolute;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  bottom: 35%;
-  left: 10%;
+  flex-direction: row;
+  align-items: center;
+  top: -40px;
+  left: 20%;
   height: 400px;
 }
 
 .header__sign--logo {
-  width: 60%;
+  width: 125px;
   margin-bottom: 25px;
+  margin-right: 20px;
 }
 
 @keyframes arrow {
@@ -337,7 +331,7 @@ stores
   position: absolute;
   transition: all 1000ms ease 500ms;
   top: -700px;
-  left: 0%;
+  left: 7%;
 }
 
 .hide__plane {
@@ -384,7 +378,6 @@ stores
   justify-content: end;
   opacity: 1;
   translate: -100px 0;
-  animation: plane 1s ease-in-out infinite alternate-reverse;
 }
 
 .plane__store:hover {
