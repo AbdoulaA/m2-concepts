@@ -127,7 +127,7 @@ plane
   align-items: center;
   justify-content: center;
   transition: all 2s ease;
-  translate: -1000px -1000px;
+  translate: 1000px -1000px;
   z-index: 10;
 }
 
@@ -294,6 +294,7 @@ plane icon
   z-index: 2;
   rotate: 90deg;
   transition: all 100ms ease-in-out;
+  text-shadow: rgb(216, 247, 255) 1px 0 10px;
 }
 
 .down:hover {

@@ -40,7 +40,7 @@ let storesList = [
     url: "./assets/coffee and bagels.png",
   },
   {
-    name: "Qdoba Mexican Restaurant",
+    name: "Qdoba Mexican Eats",
     id: 3,
     url: "./assets/qdoba logo.png",
   },
