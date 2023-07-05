@@ -339,6 +339,53 @@ responsive
   #header {
     scale: 0.9;
   }
+
+}
+
+@media (max-width: 800px) {
+  #header {
+    scale: 0.6;
+  }
+
+  .header__title {
+    margin-bottom: 16px;
+  }
+
+  nav {
+    scale: 0.7;
+    top: -15px
+  }
+
+  .container {
+    display: flex;
+    margin: 0 auto;
+  }
+
+  .nav__link {
+    max-height: 75px;
+  }
+
+  .nav__links {
+    display: flex;
+    justify-content: center;
+  }
+
+  .plane__store {
+    border-width: 2px;
+    max-height: 60px;
+  }
+
+
+}
+
+@media (max-width: 600px) {
+  .plane__store {
+    max-height: 45px;
+  }
+
+  #plane__stores {
+    top: 46%;
+  }
 }
 
 @media (max-height: 600px) {
@@ -354,16 +401,18 @@ responsive
 
   .plane__store {
     max-height: 75px;
+    border-width: 3px;
   }
 
 }
-@media (max-width: 600px) {
+
+@media (max-height: 500px) {
+  nav {
+    scale: 0.8;
+    top: -15px;
+  }
+
   #header {
-    scale: 0.6;
+    scale: 0.5;
   }
-
-  .header__title {
-    margin-bottom: 16px;
-  }
-
 }
