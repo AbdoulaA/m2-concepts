@@ -372,3 +372,18 @@ responsive
   }
 
 }
+@media (max-width: 600px) {
+  #header {
+    min-width: 80vw;
+    padding: 16px;
+  }
+
+  .header__title {
+    margin-bottom: 16px;
+  }
+  nav {
+    scale: 0.7;
+    top: -15px;
+  }
+
+}
