@@ -1,27 +1,28 @@
 let isHeaderVisible = true;
 
+let areStoresVisible = true;
+
 function togglePlane() {
   let plane = document.getElementById("plane");
   let header = document.getElementById("header");
   let bg = document.getElementById("bg__img");
 
-  if (isHeaderVisible) {
-    bg.classList.toggle("move__bg");
-    header.classList.toggle("hide__header");
-    return plane.classList.toggle("hide__plane");
-  }
-  console.log(plane);
+  bg.classList.toggle("move__bg");
+  header.classList.toggle("hide__header");
+  plane.classList.toggle("hide__plane");
 }
 
-function togglePlaneOff() {
+function toggleStoresOn() {
   let plane = document.getElementById("plane");
-  let header = document.getElementById("header");
-  let bg = document.getElementById("bg__img");
 
-  bg.classList -= "move__bg";
-  header.classList -= "hide__header";
-  plane.classList -= "hide__plane";
-  isHeaderVisible = true;
+  if (areStoresVisible == false) {
+    plane.classList.remove("scale__plane");
+    renderStores();
+    areStoresVisible = true
+  }
+
+  plane.classList.remove("scale__plane");
+  renderStores();
 }
 
 let storesList = [
@@ -67,9 +68,9 @@ function renderStores() {
   storesHtml = ``;
   stores.innerHTML = storesHtml;
 
-  for (i = 0; i <= storesList.length; i++) {
-    storesHtml += `<a href="" class="plane__link"></a>
-    <img src="${storesList[i].url}" alt="${storesList[i].name}" class="plane__store" id = "${i}" onclick="isoStore()" />`;
+  for (i = 0; i < storesList.length; i++) {
+    storesHtml += `
+    <img src="${storesList[i].url}" alt="${storesList[i].name}" class="plane__store" id = "${i}" onclick="isoStore(event)" />`;
 
     stores.innerHTML = storesHtml;
 
@@ -77,18 +78,31 @@ function renderStores() {
   }
 }
 
-function isoStore() {
-  const planeStores = document.querySelectorAll(".plane__store");
+function isoStore(event) {
+  let stores = document.getElementById("plane__stores");
+  let plane = document.getElementById("plane");
+  let storesHtml = ``;
+  stores.innerHTML = storesHtml;
+  let id = event.target.id;
 
-  planeStores.forEach((store) => {
-    store.addEventListener("click", () => {
-      planeStores.forEach((s) => {
-        if (s !== store) {
-          s.classList.toggle("hide__stores");
-        }
-      });
-    });
-  });
+  plane.classList.toggle("scale__plane");
+
+  if (areStoresVisible === false) {
+    renderStores();
+    areStoresVisible = true;
+  } else if (areStoresVisible === true) {
+    storesHtml = `
+    <img src="${storesList[id].url}" alt="${storesList[id].name}" class="plane__store" id = "${id}" onclick="isoStore(event)" />
+    
+    <div class = "store__info">
+        <div class = "store__name">
+        ${storesList[id].name}
+        </div>
+    </div>`;
+
+    stores.innerHTML = storesHtml;
+    areStoresVisible = false;
+  }
 }
 
 // setTimeout(() => {
