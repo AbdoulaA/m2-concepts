@@ -339,10 +339,6 @@ responsive
   #header {
     scale: 0.9;
   }
-  nav {
-    scale: 0.9;
-    top: -15px;
-  }
 }
 
 @media (max-height: 600px) {
@@ -354,10 +350,6 @@ responsive
   .header__title {
     margin-bottom: 16px;
   }
-  nav {
-    scale: 0.8;
-    top: -15px;
-  }
 
 }
 @media (max-width: 600px) {
@@ -367,10 +359,6 @@ responsive
 
   .header__title {
     margin-bottom: 16px;
-  }
-  nav {
-    scale: 0.9;
-    top: -15px;
   }
 
 }
