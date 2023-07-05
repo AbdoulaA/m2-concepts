@@ -21,8 +21,6 @@ function toggleStoresOn() {
     areStoresVisible = true
   }
 
-  plane.classList.remove("scale__plane");
-  renderStores();
 }
 
 let storesList = [
