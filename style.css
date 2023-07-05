@@ -345,6 +345,7 @@ responsive
   #header {
     min-width: 80vw;
     padding: 16px;
+    scale: 0.6;
   }
 
   .header__title {
