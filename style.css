@@ -13,7 +13,7 @@ body {
   background-color: #a5e5ff;
   background-position: 1000 1000px;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -48,6 +48,7 @@ ul {
 .container {
   display: flex;
   justify-content: center;
+  overflow: hidden;
 }
 
 /* 
@@ -131,7 +132,6 @@ plane
   z-index: 10;
 }
 
-
 .scale__plane {
   scale: 1.4;
 }
@@ -181,11 +181,9 @@ plane
   overflow: hidden;
 }
 
-
 .hide__stores {
   opacity: 0;
 }
-
 
 /* 
 
@@ -198,7 +196,7 @@ Header
 
 #header {
   position: absolute;
-  top: 50%;
+  top: 50vh;
   left: 50%;
   translate: -50% -50%;
   background-color: #042e7b;
@@ -267,14 +265,15 @@ Header
 
 #bg__img {
   position: absolute;
-  bottom: 0;
+  bottom: 100vh;
+  max-height: 100%;
   max-width: 100%;
   z-index: -3;
   transition: all 700ms ease;
 }
 
 .move__bg {
-  translate: 0 500px;
+  translate: 0 60vh;
 }
 
 /* 
@@ -289,7 +288,7 @@ plane icon
   font-size: 32px;
   color: #042e7b;
   position: absolute;
-  bottom: 35px;
+  top: 90vh;
   left: 50%;
   animation: arrow 1s infinite alternate-reverse;
   z-index: 2;
@@ -312,6 +311,82 @@ plane icon
   }
 }
 
+/* 
+
+about us
+
+*/
+
+#about-us {
+  background: rgb(165, 229, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(165, 229, 255, 1) 80%,
+    rgba(193, 193, 194, 1) 100%,
+    rgba(0, 212, 255, 1) 100%
+  );
+
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-us__container {
+  background-color: #042e7b;
+  padding: 32px;
+  display: flex;
+  min-width: 70vw;
+  border-radius: 25px;
+  margin: 0 auto;
+  max-height: 80vh;
+  justify-content: space-around;
+}
+
+.about-us__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #042e7b;
+  color: white;
+  padding: 24px;
+  border: white 5px solid;
+  border-radius: 25px;
+  max-width: 50vw;
+  margin-right: 32px;
+}
+
+.about-us__title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.about-us__subtitle {
+  font-size: 24px;
+  text-align: center;
+  line-height: 1.2;
+
+}
+
+.headshots {
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.headshot {
+  max-height: 200px;
+}
+
+.leonard:hover {
+  content: url(./assets/Leonard\ Mickens\ Headshot\ glow.png);
+}
+.ray:hover {
+  content: url(./assets/Ray\ Mickens\ Headshot\ glow.png);
+}
 
 /* 
 
@@ -319,8 +394,7 @@ responsive
 
 */
 
-
-@media (max-width : 1500px) {
+@media (max-width: 1500px) {
   .header__subtitle {
     font-size: 20px;
   }
@@ -334,17 +408,39 @@ responsive
   }
 }
 
-
-@media (max-width : 1100px) {
+@media (max-width: 1200px) {
   #header {
     scale: 0.9;
   }
+  .about-us__container {
+    scale: 0.9;
+  }
 
+  .about-us__title {
+    font-size: 20px;
+  }
+
+  .about-us__subtitle {
+    font-size: 16px;
+  }
+
+ 
 }
 
 @media (max-width: 800px) {
   #header {
     scale: 0.6;
+  }
+  .about-us__container {
+    scale: 0.8;
+  }
+
+  .about-us__title {
+    font-size: 20px;
+  }
+
+  .about-us__subtitle {
+    font-size: 12px;
   }
 
   .header__title {
@@ -353,7 +449,7 @@ responsive
 
   nav {
     scale: 0.7;
-    top: -15px
+    top: -15px;
   }
 
   .container {
@@ -374,8 +470,6 @@ responsive
     border-width: 2px;
     max-height: 60px;
   }
-
-
 }
 
 @media (max-width: 600px) {
@@ -388,11 +482,24 @@ responsive
   }
 }
 
-@media (max-height: 600px) {
+@media (max-height: 800px) {
   #header {
     min-width: 80vw;
     padding: 16px;
     scale: 0.6;
+  }
+  .about-us__container {
+    min-height: none;
+    padding: 16px;
+    scale: 0.8;
+  }
+
+  .about-us__title {
+    font-size: 24px;
+  }
+
+  .about-us__subtitle {
+    font-size: 16px;
   }
 
   .header__title {
@@ -404,15 +511,34 @@ responsive
     border-width: 3px;
   }
 
+  #bg__img {
+    top: 3%;
+    max-width: none;
+    max-height: 100vh;
+  }
 }
 
-@media (max-height: 500px) {
+@media (max-height: 600px) {
   nav {
     scale: 0.8;
     top: -15px;
   }
 
-  #header {
-    scale: 0.5;
+  .about-us__container {
+    scale: 0.7;
+  }
+
+  .about-us__title {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+  
+
+  .about-us__subtitle {
+    font-size: 12px;
+  }
+
+  .headshot {
+    max-height: 150px;
   }
 }

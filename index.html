@@ -18,7 +18,7 @@
   <div class="container">
     <nav>
       <ul class="nav__links">
-        <a href="#" class="nav__link">
+        <a href="#about-us" class="nav__link">
           <div class="nav__link--wrapper">
             <div class="contain">About Us</div>
           </div>
@@ -29,12 +29,20 @@
             <div class="contain">Why us</div>
           </div>
         </a>
-        <a href="#" class="nav__link--logo" onclick="toggleStoresOn(), togglePlane(), renderStores()">
+        <a
+          href="#"
+          class="nav__link--logo"
+          onclick="toggleStoresOn(), togglePlane(), renderStores()"
+        >
           <div class="nav__link--wrapper--logo">
             <img src="./assets/m2 logo light.png" alt="" class="nav__logo" />
           </div>
         </a>
-        <a href="#" class="nav__link" onclick="toggleStoresOn(), togglePlane(), renderStores()">
+        <a
+          href="#"
+          class="nav__link"
+          onclick="toggleStoresOn(), togglePlane(), renderStores()"
+        >
           <div class="nav__link--wrapper">
             <div class="contain">Stores</div>
           </div>
@@ -49,55 +57,117 @@
     </nav>
   </div>
 
-  <section id="plane">
-    <div class="container plane__container">
-      <img src="./assets/plane.png" alt="" class="plane__img" />
-    </div>
+  <!-- body -->
 
-    <div id="plane__stores">
-      <a href="" class="plane__link"></a>
-        <img src="./assets/cfa logo.png" alt="" class="plane__store" id = "" onclick="isoStore(event)" />
-    </div>
-  </section>
-
-  <section id="header">
-    <div class="container header__container">
-      <div class="header__title">What Does M2 Concepts Do?</div>
-      <div class="header__subtitle">
-        M2 Concepts, LLC is a privately held, minority owned food, beverage, and
-        retailing company with expertise in food & beverage and retail
-        operations in airports and non-traditional settings. M2 Concepts is
-        completely dedicated to delivering the highest level of customer service
-        in the industry, and we have the awards to proudly show it. This is a
-        company whose foundation is built on hospitality and relationships. The
-        company is headquartered in Dallas/Ft. Worth area and have operations in
-        Dallas (DFW), Houston George Bush (IAH), and San Antonio (SAT)
+  <body>
+    <section id="plane">
+      <div class="container plane__container">
+        <img src="./assets/plane.png" alt="" class="plane__img" />
       </div>
-    </div>
-    <div class="header__sign">
-      <div class="header__sign--logos">
-        <a href="https://www.dfwairport.com/" target="_blank">
-          <img src="./assets/dfw logo.png" alt="" class="header__sign--logo dfw">
-        </a>
-        <a href="https://www.fly2houston.com/" target="_blank">
-          <img src="./assets/iah logo.png" alt="" class="header__sign--logo iah">
-        </a>            
-        <a href="https://flysanantonio.com/" target="_blank">
-          <img src="./assets/sat logo.png" alt="" class="header__sign--logo sat">
-        </a>          
+
+      <div id="plane__stores">
+        <a href="" class="plane__link"></a>
+        <img
+          src="./assets/cfa logo.png"
+          alt=""
+          class="plane__store"
+          id=""
+          onclick="isoStore(event)"
+        />
       </div>
-    </div>
-  </section>
+    </section>
 
-  <div class="container">
-    <img src="./assets/background img.png" alt="" id="bg__img">
-  </div>
-  <a href="#" class="down__link" onclick="togglePlane(), renderStores(), toggleStoresOn()">
-    <i class="fa-solid fa-plane down"></i>          
-  </a>
+    <header class="container header__wrapper">
+      <section id="header">
+        <div class="container header__container">
+          <div class="header__title">What Does M2 Concepts Do?</div>
+          <div class="header__subtitle">
+            M2 Concepts, LLC is a privately held, minority owned food, beverage,
+            and retailing company with expertise in food & beverage and retail
+            operations in airports and non-traditional settings. M2 Concepts is
+            completely dedicated to delivering the highest level of customer
+            service in the industry, and we have the awards to proudly show it.
+            This is a company whose foundation is built on hospitality and
+            relationships. The company is headquartered in Dallas/Ft. Worth area
+            and have operations in Dallas (DFW), Houston George Bush (IAH), and
+            San Antonio (SAT)
+          </div>
+        </div>
+        <div class="header__sign">
+          <div class="header__sign--logos">
+            <a href="https://www.dfwairport.com/" target="_blank">
+              <img
+                src="./assets/dfw logo.png"
+                alt=""
+                class="header__sign--logo dfw"
+              />
+            </a>
+            <a href="https://www.fly2houston.com/" target="_blank">
+              <img
+                src="./assets/iah logo.png"
+                alt=""
+                class="header__sign--logo iah"
+              />
+            </a>
+            <a href="https://flysanantonio.com/" target="_blank">
+              <img
+                src="./assets/sat logo.png"
+                alt=""
+                class="header__sign--logo sat"
+              />
+            </a>
+          </div>
+        </div>
+      </section>
 
+      <div class="container">
+        <img src="./assets/background img.png" alt="" id="bg__img" />
+      </div>
+      <a
+        href="#"
+        class="down__link"
+        onclick="togglePlane(), renderStores(), toggleStoresOn()"
+      >
+        <i class="fa-solid fa-plane down"></i>
+      </a>
+    </header>
+
+    <section id="about-us">
+      <div class="about-us__container">
+        <div class="container about-us__text">
+          <div class="about-us__title">Who are we?</div>
+          <div class="about-us__subtitle">
+            The owners of the company are Mr. Leonard Mickens and Mr. Ray
+            Mickens. They are committed and focused on continually improving
+            their family way of doing business which emphasizes providing
+            quality food and beverage, and retailing experiences in a
+            guest-friendly environment. They strive to maintain strong and solid
+            relationships with the communities and airport officials where they
+            do business. After over 10 years of operating and managing airport
+            facilities, M2 concepts' owners have developed a top notch
+            reputation for delivering superior customer services and strong
+            business relationships. Their dedication and customer service
+            oriented motto fit in well with top airport concessions programs. M2
+            Concepts will continue to bring airports the world class service
+            they have come to expect from us as premier food, beverage, and
+            retail operators. Together they form a team that has been successful
+            in winning RFPs, and operational excellence.
+          </div>
+        </div>
+
+        <div class="headshots">
+          <img
+            src="./assets/Leonard Mickens Headshot.png"
+            alt="Leonard Mickens headshot"
+            class="headshot leonard"
+          />
+          <img
+            src="./assets/Ray Mickens Headshot.png"
+            alt="Leonard Mickens headshot"
+            class="headshot ray"
+          />
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
-
-
-
-
