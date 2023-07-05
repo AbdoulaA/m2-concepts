@@ -352,6 +352,10 @@ responsive
     margin-bottom: 16px;
   }
 
+  .plane__store {
+    max-height: 75px;
+  }
+
 }
 @media (max-width: 600px) {
   #header {
