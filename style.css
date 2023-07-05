@@ -366,4 +366,9 @@ responsive
   .header__title {
     margin-bottom: 16px;
   }
+  nav {
+    scale: 0.7;
+    top: -15px;
+  }
+
 }
