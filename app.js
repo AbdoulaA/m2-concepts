@@ -18,9 +18,18 @@ function toggleStoresOn() {
   if (areStoresVisible == false) {
     plane.classList.remove("scale__plane");
     renderStores();
-    areStoresVisible = true
+    areStoresVisible = true;
   }
+}
 
+function togglePlaneOff() {
+  let plane = document.getElementById("plane");
+  let header = document.getElementById("header");
+  let bg = document.getElementById("bg__img");
+
+  bg.classList.remove("move__bg");
+  header.classList.remove("hide__header");
+  plane.classList.remove("hide__plane");
 }
 
 let storesList = [
@@ -71,8 +80,6 @@ function renderStores() {
     <img src="${storesList[i].url}" alt="${storesList[i].name}" class="plane__store" id = "${i}" onclick="isoStore(event)" />`;
 
     stores.innerHTML = storesHtml;
-
-    console.log("word");
   }
 }
 
@@ -103,21 +110,60 @@ function isoStore(event) {
   }
 }
 
-// setTimeout(() => {
-//     renderStores();
-//   }, 1000);
+function ownerText(event) {
+  let ownerText = document.getElementById("owner-text");
+  id = event.target.id;
 
-// function renderStores() {
-//   let storesWrapper = document.querySelector(".plane__stores");
-//   let stores = getStores();
+  if (id == "leonard") {
+    ownerText.innerHTML = `<i class="fa-solid fa-arrow-left back" onclick="returnText()"></i>
+    <div class="about-us__title">Leonard Mickens</div>
+        <div class="about-us__subtitle">
+          <p>
+          <span class="role">President</span><br><br>in charge of day to day operations and oversees the customer service and loss prevention programs.  
 
-//   storesWrapper.innerHTML = stores
-//     .map((store) => {
-//       return `<a href="" class="plane__link"></a>
-//     <img src="${store.url}" alt="" class="plane__store" />
-//   </a>`;
-//     })
-//     .join("");
+          He has received the 2011, 2012, and 2013 Customer Service Champion awards at DFW airport for best vendor service.
+          
+          
+          </p>
+        </div>`;
+  } else if (id == "ray") {
+    ownerText.innerHTML = `<i class="fa-solid fa-arrow-left back" onclick="returnText()"></i>
+    <div class="about-us__title">Ray Mickens</div>
+        <div class="about-us__subtitle">
+          <p>
+          <span class="role">Vice President</span><br><br>in charge of business development, financial oversight, and marketing.  
 
-//   console.log("worked");
-// }
+          He holds a Bachelor Business Administration and has over 10 years managing, owning, and consulting in the food and beverage industry in the airport community.
+          
+          
+          </p>
+        </div>`;
+  }
+}
+
+
+function returnText() {
+    let ownerText = document.getElementById("owner-text");
+
+    ownerText.innerHTML = `<div class="about-us__title">Who are we?</div>
+    <div class="about-us__subtitle">
+      <p>
+        The owners of the company are Mr. Leonard Mickens and Mr. Ray
+        Mickens. They are committed and focused on continually improving
+        their family way of doing business which emphasizes providing
+        quality food and beverage, and retailing experiences in a
+        guest-friendly environment. They strive to maintain strong and
+        solid relationships with the communities and airport officials
+        where they do business. After over 10 years of operating and
+        managing airport facilities, M2 concepts' owners have developed a
+        top notch reputation for delivering superior customer services and
+        strong business relationships. Their dedication and customer
+        service oriented motto fit in well with top airport concessions
+        programs. M2 Concepts will continue to bring airports the world
+        class service they have come to expect from us as premier food,
+        beverage, and retail operators. Together they form a team that has
+        been successful in winning RFPs, and operational excellence.
+      </p>
+    </div>`
+
+}

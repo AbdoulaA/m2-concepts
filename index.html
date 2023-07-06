@@ -26,13 +26,13 @@
 
         <a href="#" class="nav__link">
           <div class="nav__link--wrapper">
-            <div class="contain">Why us</div>
+            <div class="contain">Join us</div>
           </div>
         </a>
         <a
           href="#"
           class="nav__link--logo"
-          onclick="toggleStoresOn(), togglePlane(), renderStores()"
+          onclick="togglePlaneOff()"
         >
           <div class="nav__link--wrapper--logo">
             <img src="./assets/m2 logo light.png" alt="" class="nav__logo" />
@@ -124,9 +124,9 @@
         <img src="./assets/background img.png" alt="" id="bg__img" />
       </div>
       <a
-        href="#"
+        href="#about-us"
         class="down__link"
-        onclick="togglePlane(), renderStores(), toggleStoresOn()"
+        onclick="togglePlaneOff()"
       >
         <i class="fa-solid fa-plane down"></i>
       </a>
@@ -134,24 +134,26 @@
 
     <section id="about-us">
       <div class="about-us__container">
-        <div class="container about-us__text">
+        <div class="container about-us__text" id="owner-text">
           <div class="about-us__title">Who are we?</div>
           <div class="about-us__subtitle">
-            The owners of the company are Mr. Leonard Mickens and Mr. Ray
-            Mickens. They are committed and focused on continually improving
-            their family way of doing business which emphasizes providing
-            quality food and beverage, and retailing experiences in a
-            guest-friendly environment. They strive to maintain strong and solid
-            relationships with the communities and airport officials where they
-            do business. After over 10 years of operating and managing airport
-            facilities, M2 concepts' owners have developed a top notch
-            reputation for delivering superior customer services and strong
-            business relationships. Their dedication and customer service
-            oriented motto fit in well with top airport concessions programs. M2
-            Concepts will continue to bring airports the world class service
-            they have come to expect from us as premier food, beverage, and
-            retail operators. Together they form a team that has been successful
-            in winning RFPs, and operational excellence.
+            <p>
+              The owners of the company are Mr. Leonard Mickens and Mr. Ray
+              Mickens. They are committed and focused on continually improving
+              their family way of doing business which emphasizes providing
+              quality food and beverage, and retailing experiences in a
+              guest-friendly environment. They strive to maintain strong and
+              solid relationships with the communities and airport officials
+              where they do business. After over 10 years of operating and
+              managing airport facilities, M2 concepts' owners have developed a
+              top notch reputation for delivering superior customer services and
+              strong business relationships. Their dedication and customer
+              service oriented motto fit in well with top airport concessions
+              programs. M2 Concepts will continue to bring airports the world
+              class service they have come to expect from us as premier food,
+              beverage, and retail operators. Together they form a team that has
+              been successful in winning RFPs, and operational excellence.
+            </p>
           </div>
         </div>
 
@@ -160,11 +162,15 @@
             src="./assets/Leonard Mickens Headshot.png"
             alt="Leonard Mickens headshot"
             class="headshot leonard"
+            id="leonard"
+            onclick="ownerText(event)"
           />
           <img
             src="./assets/Ray Mickens Headshot.png"
             alt="Leonard Mickens headshot"
             class="headshot ray"
+            id="ray"
+            onclick="ownerText(event)"
           />
         </div>
       </div>
