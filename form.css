@@ -251,12 +251,61 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 }
 
+
+
 /* 
 
 
-plane
+Footer
+
 
 
 */
 
 
+footer {
+    height: 150px;
+    background-color: #042e7b;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .footer__links {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 700px;
+  }
+  
+  .footer__link {
+    list-style: none;
+    padding: 8px;
+    border: white 3px solid;
+    max-height: 50px;
+    border-radius: 10px;
+    transition: all 200ms ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .footer__link:hover {
+    scale: 1.1;
+    text-shadow: rgb(216, 247, 255) 1px 0 10px;
+    box-shadow: rgb(216, 247, 255) 1px 0 10px;
+  
+  }
+  
+  .footer__logo {
+    max-height: min-content;
+  }
+  
+  .footer__logo:hover .footer__logo--img {
+    content: url(./assets/m2\ logo\ white.png);
+  }
+  
+  .footer__logo--img {
+    height: 75px;
+  }
