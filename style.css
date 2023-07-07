@@ -224,6 +224,8 @@ Header
   border-radius: 25px;
 }
 
+.header__wrapper {}
+
 .header__title {
   font-size: 32px;
   font-weight: bold;
@@ -425,49 +427,80 @@ join us
 
 #join-us {
   padding: 48px;
-  padding-top: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: rgb(255, 255, 255);
+  /* background: rgb(255, 255, 255);
   background: linear-gradient(
     0deg,
     rgba(255, 255, 255, 1) 90%,
     rgba(165, 229, 255, 1) 100%
-  );
+  ); */
+  background-color: #a5e5ff;
+}
 
+.section__container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
 .section__text {
   text-align: center;
-  color: #002128;
+  color: white;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   max-width: 70vw;
   margin: 56px;
+  height: 70vh;
+  background-color: #042e7b;
+  padding: 24px;
+  border-radius: 20px;
+}
 
+.section__wrapper {
+  border: white 5px solid;
+  height: 100%;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-radius: 20px;
 }
 
 .section__title {
+  color: white;
   font-size: 32px;
   font-weight: bold;
 }
 
 .section__subtitle {
   font-size: 24px;
-  margin-top: 56px;
+  margin-top: 24px;
   font-weight: normal;
+  margin-bottom: 40px;
+  transition: all 200ms ease;
+
 }
 
-.highlight__wrapper {
+.subtitle__link:hover {
+  scale: 1.1;
+  text-shadow: rgb(216, 247, 255) 1px 0 10px;
+
+}
+
+#highlight__wrapper {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
   width: 100%;
   max-width: 1200px;
+  height: 100vh;
+  padding: 100px;
+  position: relative;
 }
 
 .highlight {
@@ -477,6 +510,7 @@ join us
   justify-content: space-between;
   width: 33%;
   max-width: 250px;
+  max-height: 300px;
   background-color: #042e7b;
   padding: 12px;
   border-radius: 25px;
@@ -488,11 +522,21 @@ join us
   scale: 1.25;
 }
 
+.highlight:hover .highlight__subtitle {
+  opacity: 1;
+}
+.highlight:hover .highlight__title {
+  translate: none;
+}
+.highlight:hover .highlight__container {
+  box-shadow: 0 0 5px 3px rgb(255, 255, 255);
+}
+
 .highlight__container {
   background-color: #042e7b;
   border: white 5px solid;
   border-radius: 25px;
-  height: 250px;
+  min-height: 100%;
   padding: 16px;
   display: flex;
   flex-direction: column;
@@ -502,9 +546,12 @@ join us
 .highlight__subtitle {
   text-align: center;
   font-weight: normal;
-  font-size: 12px;
+  font-size: 16px;
   text-align: center;
   color: white;
+  opacity: 0;
+  transition: all 200ms ease;
+
 }
 
 .highlight__title {
@@ -513,6 +560,14 @@ join us
   color: white;
   font-weight: bold;
   margin: 8px;
+  translate: 0 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 200ms ease;
+
+
 }
 
 .career {
@@ -520,11 +575,43 @@ join us
   font-size: 40px;
   text-align: center;
 }
+
+.career__down {
+  font-size: 20px;
+  color: white;
+  position: absolute;
+  translate: 0 25px;
+  animation: arrow 1s infinite alternate-reverse;
+  z-index: 2;
+  rotate: 90deg;
+  transition: all 100ms ease-in-out;
+
+}
 /* 
 
 responsive
 
 */
+
+@media (max-width: 3000px) {
+  #header, #about-us {
+    scale: 1.2;
+  }
+
+  .down {
+    translate: 0 -50px;
+  }
+}
+
+@media (max-width: 2000px) {
+  #header, #about-us {
+    scale: 1;
+  }
+
+  .down {
+    translate: none;
+  }
+}
 
 @media (max-width: 1500px) {
   .header__subtitle {
@@ -607,7 +694,7 @@ responsive
   }
 }
 
-@media (max-width:900px) {
+@media (max-width: 900px) {
   .highlight__subtitle {
     font-size: 10px;
   }
@@ -621,17 +708,40 @@ responsive
   #plane__stores {
     top: 46%;
   }
-
 }
 
 @media (max-height: 1000px) {
   #bg__img {
-    top: 2%;
+    top: 0%;
     max-height: 100vh;
+  }
+
+  .section__title {
+    font-size: 28px;
+  }
+  .section__subtitle {
+    font-size: 20px;
+  }
+
+  .career__down {
+    translate: 0 20px;
+  }
+}
+@media (max-height: 800px) {
+  
+  .section__title {
+    font-size: 24px;
+  }
+  .section__subtitle {
+    font-size: 16px;
+  }
+
+  .career__down {
+    translate: 0 20px;
   }
 }
 
-@media (max-height: 800px) {
+@media (max-height: 700px) {
   #header {
     min-width: 80vw;
     padding: 16px;
@@ -667,9 +777,6 @@ responsive
     max-height: 100vh;
     top: 2%;
   }
-
-
-
 }
 
 @media (max-height: 600px) {
@@ -696,5 +803,18 @@ responsive
   .headshot {
     max-height: 150px;
   }
-  
+
+  .section__title {
+    font-size: 20px;
+    margin: 0;
+  }
+  .section__subtitle {
+    font-size: 12px;
+    margin: 0;
+  }
+
+  .career__down {
+    translate: 0 10px;
+    font-size: 10px;
+  }
 }
