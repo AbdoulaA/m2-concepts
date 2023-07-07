@@ -169,7 +169,46 @@ plane
   color: #042e7b;
   font-weight: bold;
   font-size: 24px;
+}
+.store__apply {
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+  padding: 8px;
+  background-color: #042e7b;
+  border-radius: 10px;
+  height: 50px;
+  transition: all 200ms ease;
+}
+
+.store__apply--link {
+  border: white 3px solid;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.store__apply:hover {
+  text-shadow: rgb(216, 247, 255) 1px 0 10px;
+  scale: 1.1;
+
+}
+.store__apply:hover .store__apply--link {
+  box-shadow: rgb(216, 247, 255) 1px 0 10px;
+
+}
+
+
+.store__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   padding-left: 32px;
+  text-align: left;
 }
 
 .plane__store:hover {
@@ -224,7 +263,6 @@ Header
   border-radius: 25px;
 }
 
-.header__wrapper {}
 
 .header__title {
   font-size: 32px;
@@ -498,7 +536,8 @@ join us
   justify-content: space-around;
   width: 100%;
   max-width: 1200px;
-  height: 100vh;
+  min-height: 100vh;
+  height: 100%;
   padding: 100px;
   position: relative;
 }
@@ -586,6 +625,64 @@ join us
   rotate: 90deg;
   transition: all 100ms ease-in-out;
 
+}
+
+
+/* 
+
+
+Footer
+
+
+
+*/
+
+
+footer {
+  height: 150px;
+  background-color: #042e7b;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__links {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 700px;
+}
+
+.footer__link {
+  list-style: none;
+  padding: 8px;
+  border: white 3px solid;
+  max-height: 50px;
+  border-radius: 10px;
+  transition: all 200ms ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__link:hover {
+  scale: 1.1;
+  text-shadow: rgb(216, 247, 255) 1px 0 10px;
+  box-shadow: rgb(216, 247, 255) 1px 0 10px;
+
+}
+
+.footer__logo {
+  max-height: min-content;
+}
+
+.footer__logo:hover .footer__logo--img {
+  content: url(./assets/m2\ logo\ white.png);
+}
+
+.footer__logo--img {
+  height: 75px;
 }
 /* 
 
@@ -717,10 +814,10 @@ responsive
   }
 
   .section__title {
-    font-size: 28px;
+    font-size: 32px;
   }
   .section__subtitle {
-    font-size: 20px;
+    font-size: 24px;
   }
 
   .career__down {

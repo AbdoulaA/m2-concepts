@@ -29,7 +29,11 @@
             <div class="contain">Join us</div>
           </div>
         </a>
-        <a href="./index.html#" class="nav__link--logo" onclick="togglePlaneOff()">
+        <a
+          href="./index.html#"
+          class="nav__link--logo"
+          onclick="togglePlaneOff()"
+        >
           <div class="nav__link--wrapper--logo">
             <img src="./assets/m2 logo light.png" alt="" class="nav__logo" />
           </div>
@@ -56,10 +60,15 @@
   <!-- form -->
 
   <body>
-    <div class="form__container">
+
+    
+      
+  
+    <section class="form__container">
       <div class="form__wrapper">
+        <h1>Contact Us</h1>
         <form id="job-form">
-          <section>
+          <section class="section-outline">
             <h2 class="form-section-title">Personal Information</h2>
             <div class="row-wrapper">
               <div class="row">
@@ -109,15 +118,7 @@
                   />
                 </div>
               </div>
-              <div class="row">
-                <div class="col-9">
-                  <input
-                    name="address-2"
-                    type="text"
-                    placeholder="Address Line 2"
-                  />
-                </div>
-              </div>
+             
               <div class="row">
                 <div class="col-4">
                   <input name="city" type="text" placeholder="City" />
@@ -292,7 +293,7 @@
             </div>
           </section>
 
-          <section>
+          <section class="section-outline">
             <h2 class="form-section-title">
               Prior Work Experience <br />
               Current or Most Recent
@@ -321,7 +322,7 @@
                       name="emp1-address-2"
                       type="text"
                       placeholder="Address Line 2"
-                    /> 
+                    />
                   </div>
                 </div>
 
@@ -627,7 +628,7 @@
             </div>
           </section>
 
-          <section>
+          <section class="section-outline">
             <h2 class="form-section-title">Education</h2>
 
             <div class="row-wrapper">
@@ -785,7 +786,7 @@
             </div>
           </section>
 
-          <section>
+          <section class="section-outline">
             <h2 class="form-section-title">Personal References</h2>
 
             <div class="row-wrapper">
@@ -922,9 +923,11 @@
               </section>
             </div>
           </section>
-          <input type="submit" value="Submit" />
+          <div class="submit__wrapper">
+            <input type="submit" value="Submit" class="submit__btn"/>
+          </div>
         </form>
       </div>
-    </div>
+    </section>
   </body>
 </html>

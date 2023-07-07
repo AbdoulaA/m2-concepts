@@ -12,6 +12,17 @@ function togglePlane() {
   plane.classList.toggle("hide__plane");
 }
 
+function togglePlaneForm() {
+    let plane = document.getElementById("plane");
+    let header = document.getElementById("header");
+    let bg = document.getElementById("bg__img");
+  
+    bg.classList.toggle("move__bg");
+    header.classList.toggle("hide__header");
+    plane.classList.toggle("hide__plane");
+  }
+  
+
 function toggleStoresOn() {
   let plane = document.getElementById("plane");
 
@@ -112,6 +123,11 @@ function isoStore(event) {
     <div class = "store__info">
         <div class = "store__name">
         ${storesList[id].name}
+        </div>
+        <div class = "store__apply">
+            <a href="./form.html" class= "store__apply--link">
+            Apply Now!
+            </a>
         </div>
     </div>`;
 
