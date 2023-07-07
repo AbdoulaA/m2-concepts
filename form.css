@@ -1,0 +1,222 @@
+* {
+  font-family: "halyard-text", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  line-height: 1;
+}
+body {
+  background-color: #a5e5ff;
+  background-position: 1000 1000px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 32px;
+  color: white;
+}
+h2 {
+  font-weight: bold;
+  font-size: 24px;
+  color: white;
+}
+h3 {
+  font-weight: normal;
+  font-size: 16px;
+  color: white;
+}
+
+a {
+  font-family: "halyard-text", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+  text-decoration: none;
+  color: white;
+}
+
+ul {
+  display: flex;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* 
+  
+  
+  nav
+  
+  
+  */
+
+nav {
+  max-width: 1200px;
+  width: 100%;
+  position: fixed;
+  z-index: 20;
+}
+
+.nav__links {
+  max-width: fit-content;
+  margin: 0 auto;
+  display: flex;
+}
+
+.nav__link {
+  background-color: #042e7b;
+  border-radius: 0 0 10px 10px;
+  margin: 0 10px;
+  max-height: 65px;
+}
+.nav__link--logo {
+  background-color: #042e7b;
+  border-radius: 0 0 10px 10px;
+  margin: 0 10px;
+}
+
+.nav__link--logo:hover .nav__logo {
+  content: url(./assets/m2\ logo\ white.png);
+}
+
+.nav__link--wrapper {
+  background-color: #042e7b;
+  border: white 3px solid;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+.nav__link--wrapper--logo {
+  background-color: #042e7b;
+  border: white 3px solid;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.nav__link--wrapper:hover {
+  box-shadow: 0 0 10px 3px rgb(255, 255, 255);
+  text-shadow: 1px 1px 10px #fff, 1px 1px 10px #ffffff;
+  color: #ffffff;
+}
+
+.nav__logo {
+  max-width: 100px;
+}
+
+/* 
+  
+  
+form
+
+  
+*/
+
+
+form {
+    color: white;
+}
+
+.form__container {
+  height: 100%;
+  width: 100%;
+  max-width: 85vw;
+  margin: 150px auto;
+  background-color: #042e7b;
+  padding: 24px;
+  border-radius: 20px;
+
+}
+
+.form__wrapper {
+    border: white 5px solid;
+    height: 100%;
+    padding: 24px;
+    border-radius: 20px;
+}
+
+
+section {
+    padding: 56px;
+
+}
+
+.form-section-title {
+    margin-bottom: 24px;
+}
+
+.form-field-section {
+    padding: 16px;
+}
+
+.row {
+    margin: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.row-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.col-4 {
+    display: flex;
+    justify-content: space-between;
+    
+}
+.col-i {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    
+}
+
+.col-9 {
+    display: flex;
+    max-height: 100%;
+}
+
+input {
+    background-color: #042e7b;
+    border: white 3px solid;
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 8px;
+    color: white;
+    outline: white;
+    transition: all 200ms ease;
+    
+}
+
+input::placeholder {
+    color: #cacaca;
+}
+
+input:focus {
+    box-shadow: 0 0 5px 3px rgb(255, 255, 255);
+}
+
+label {
+    margin-right: 8px;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    color: rgba(0, 0, 0, 0);
+    opacity: 1;
+    display: block;
+    background: url(https://mywildalberta.ca/images/GFX-MWA-Parks-Reservations.png) no-repeat;
+    width: 20px;
+    height: 20px;
+    border-width: thin;
+}
