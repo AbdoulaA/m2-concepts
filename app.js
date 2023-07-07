@@ -32,6 +32,16 @@ function togglePlaneOff() {
   plane.classList.remove("hide__plane");
 }
 
+function togglePlaneOn() {
+  let plane = document.getElementById("plane");
+  let header = document.getElementById("header");
+  let bg = document.getElementById("bg__img");
+
+  bg.classList.add("move__bg");
+  header.classList.add("hide__header");
+  plane.classList.add("hide__plane");
+}
+
 let storesList = [
   {
     name: "Chick-Fil-A",
@@ -141,11 +151,10 @@ function ownerText(event) {
   }
 }
 
-
 function returnText() {
-    let ownerText = document.getElementById("owner-text");
+  let ownerText = document.getElementById("owner-text");
 
-    ownerText.innerHTML = `<div class="about-us__title">Who are we?</div>
+  ownerText.innerHTML = `<div class="about-us__title">Who are we?</div>
     <div class="about-us__subtitle">
       <p>
         The owners of the company are Mr. Leonard Mickens and Mr. Ray
@@ -164,6 +173,19 @@ function returnText() {
         beverage, and retail operators. Together they form a team that has
         been successful in winning RFPs, and operational excellence.
       </p>
-    </div>`
+    </div>`;
+}
 
+function scrollPlane() {
+  var oldScrollY = window.scrollY;
+  window.onscroll = function (e) {
+    if (oldScrollY < window.scrollY) {
+      console.log("Down");
+      togglePlaneOff();
+    } else {
+      console.log("Up");
+      togglePlaneOn();
+    }
+    oldScrollY = window.scrollY;
+  };
 }

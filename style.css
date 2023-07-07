@@ -63,7 +63,7 @@ nav {
   max-width: 1200px;
   width: 100%;
   position: fixed;
-  z-index: 10;
+  z-index: 20;
 }
 
 .nav__links {
@@ -265,9 +265,8 @@ Header
 
 #bg__img {
   position: absolute;
-  bottom: 100vh;
-  max-height: 100%;
-  max-width: 100%;
+  top: -50%;
+  max-height: 100vh;
   z-index: -3;
   transition: all 700ms ease;
 }
@@ -331,6 +330,7 @@ about us
   justify-content: center;
   align-items: center;
   z-index: 10;
+  position: relative;
 }
 
 .about-us__container {
@@ -369,7 +369,6 @@ about us
   font-size: 24px;
   text-align: center;
   line-height: 1.2;
-
 }
 
 .headshots {
@@ -419,6 +418,110 @@ about us
 
 /* 
 
+join us
+
+
+*/
+
+#join-us {
+  padding: 48px;
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 90%,
+    rgba(165, 229, 255, 1) 100%
+  );
+
+}
+
+.section__text {
+  text-align: center;
+  color: #002128;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 70vw;
+  margin: 56px;
+
+}
+
+.section__title {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.section__subtitle {
+  font-size: 24px;
+  margin-top: 56px;
+  font-weight: normal;
+}
+
+.highlight__wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.highlight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 33%;
+  max-width: 250px;
+  background-color: #042e7b;
+  padding: 12px;
+  border-radius: 25px;
+  margin: 20px 40px;
+  transition: all 200ms ease;
+}
+
+.highlight:hover {
+  scale: 1.25;
+}
+
+.highlight__container {
+  background-color: #042e7b;
+  border: white 5px solid;
+  border-radius: 25px;
+  height: 250px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.highlight__subtitle {
+  text-align: center;
+  font-weight: normal;
+  font-size: 12px;
+  text-align: center;
+  color: white;
+}
+
+.highlight__title {
+  font-size: 24px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  margin: 8px;
+}
+
+.career {
+  color: white;
+  font-size: 40px;
+  text-align: center;
+}
+/* 
+
 responsive
 
 */
@@ -441,7 +544,8 @@ responsive
   #header {
     scale: 0.9;
   }
-  .about-us__container, span {
+  .about-us__container,
+  span {
     scale: 0.9;
   }
 
@@ -452,8 +556,9 @@ responsive
   .about-us__subtitle {
     font-size: 16px;
   }
-
- 
+  .highlight {
+    margin: 10px 20px;
+  }
 }
 
 @media (max-width: 800px) {
@@ -464,7 +569,8 @@ responsive
     scale: 0.8;
   }
 
-  .about-us__title, span {
+  .about-us__title,
+  span {
     font-size: 20px;
   }
 
@@ -501,6 +607,12 @@ responsive
   }
 }
 
+@media (max-width:900px) {
+  .highlight__subtitle {
+    font-size: 10px;
+  }
+}
+
 @media (max-width: 600px) {
   .plane__store {
     max-height: 45px;
@@ -508,6 +620,14 @@ responsive
 
   #plane__stores {
     top: 46%;
+  }
+
+}
+
+@media (max-height: 1000px) {
+  #bg__img {
+    top: 2%;
+    max-height: 100vh;
   }
 }
 
@@ -517,13 +637,15 @@ responsive
     padding: 16px;
     scale: 0.6;
   }
-  .about-us__container, span {
+  .about-us__container,
+  span {
     min-height: none;
     padding: 16px;
     scale: 0.8;
   }
 
-  .about-us__title, span {
+  .about-us__title,
+  span {
     font-size: 24px;
   }
 
@@ -541,10 +663,13 @@ responsive
   }
 
   #bg__img {
-    top: 3%;
     max-width: none;
     max-height: 100vh;
+    top: 2%;
   }
+
+
+
 }
 
 @media (max-height: 600px) {
@@ -553,15 +678,16 @@ responsive
     top: -15px;
   }
 
-  .about-us__container, span {
+  .about-us__container,
+  span {
     scale: 0.7;
   }
 
-  .about-us__title, span {
+  .about-us__title,
+  span {
     font-size: 18px;
     margin-bottom: 16px;
   }
-  
 
   .about-us__subtitle {
     font-size: 12px;
@@ -570,4 +696,5 @@ responsive
   .headshot {
     max-height: 150px;
   }
+  
 }
