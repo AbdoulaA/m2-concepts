@@ -177,15 +177,14 @@ function returnText() {
 }
 
 function scrollPlane() {
+    let header = document.getElementById("header");
+
   var oldScrollY = window.scrollY;
   window.onscroll = function (e) {
     if (oldScrollY < window.scrollY) {
       console.log("Down");
       togglePlaneOff();
-    } else {
-      console.log("Up");
-      togglePlaneOn();
-    }
+    } 
     oldScrollY = window.scrollY;
   };
 }
