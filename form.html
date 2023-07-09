@@ -26,7 +26,7 @@
 
         <a href="./index.html#join-us" class="nav__link">
           <div class="nav__link--wrapper">
-            <div class="contain">Join us</div>
+            <div class="contain">Careers</div>
           </div>
         </a>
         <a
@@ -60,13 +60,38 @@
   <!-- form -->
 
   <body>
+    <section id="borm">
+      <div class="borm__container">
+        <div class="borm__wrapper">
+          <h2 class="borm__title">Contact Us</h2>
+          <form id="text-form">
+            <div class="input__info">
+              <label>Name</label> <input type="text" required />
+            </div>
+            <div class="input__info">
+              <label>Email</label> <input type="email" required />
+            </div>
+            <div class="input__info">
+              <label>Phone Number</label> <input type="text" />
+            </div>
+            <div class="input__info">
+              <label>Message</label>
+              <textarea type="text" required style="height: 200px"></textarea>
+            </div>
+            <div class="submit__wrapper">
+                <input type="submit" value="Submit" class="submit__btn submit__btn--contact" />
+            </div>
+          </form>
+        </div>
+      </div>
+      <a href="#form__container" class="down__link" onclick="togglePlaneOff()">
+        <i class="fa-solid fa-plane down"></i>
+      </a>
+    </section>
 
-    
-      
-  
-    <section class="form__container">
+    <section id="form__container">
       <div class="form__wrapper">
-        <h1>Contact Us</h1>
+        <h1>Join Us</h1>
         <form id="job-form">
           <section class="section-outline">
             <h2 class="form-section-title">Personal Information</h2>
@@ -90,12 +115,7 @@
                   <input name="last-name" type="text" required />
                 </div>
               </div>
-              <div class="row">
-                <div class="col-3">
-                  <label class="form-label">Social Security Number</label>
-                  <input name="ssn" type="password" />
-                </div>
-              </div>
+              
               <div class="row">
                 <div class="col-7">
                   <label class="form-label">Email</label>
@@ -118,7 +138,7 @@
                   />
                 </div>
               </div>
-             
+
               <div class="row">
                 <div class="col-4">
                   <input name="city" type="text" placeholder="City" />
@@ -130,15 +150,10 @@
                   <input name="zipcode" type="text" placeholder="Zip Code" />
                 </div>
               </div>
+              
               <div class="row">
                 <div class="col-3">
-                  <label class="form-label">Home Phone</label>
-                  <input name="home-phone" type="text" />
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-3">
-                  <label class="form-label">Mobile Phone</label>
+                  <label class="form-label">Phone Number</label>
                   <input name="mobile-phone" type="text" />
                 </div>
               </div>
@@ -924,19 +939,49 @@
             </div>
           </section>
           <div class="submit__wrapper">
-            <input type="submit" value="Submit" class="submit__btn"/>
+            <input type="submit" value="Submit" class="submit__btn" />
           </div>
         </form>
       </div>
     </section>
   </body>
+
   <footer>
     <ul class="footer__links">
-      <li class="footer__link"><a href="./index.html#about-us" class="footer__link--anchor">About Us</a></li>
-      <li class="footer__link"><a href="./index.html#join-us" class="footer__link--anchor">Join Us</a></li>
-      <li class="footer__link footer__logo"><a href="./index.html#" class="footer__link--anchor " ><img src="./assets/m2 logo light.png" class="footer__logo--img"></a></li>
-      <li class="footer__link"><a href="./index.html#" class="footer__link--anchor" onclick="toggleStoresOn(), togglePlane(), renderStores(), scrollPlane()">Stores</a></li>
-      <li class="footer__link"><a href="./form.html" class="footer__link--anchor">Contact Us</a></li>
+      <li class="footer__link">
+        <a href="./index.html#about-us" class="footer__link--anchor"
+          >About Us</a
+        >
+      </li>
+      <li class="footer__link">
+        <a href="./index.html#join-us" class="footer__link--anchor">Careers</a>
+      </li>
+      <li class="footer__link footer__logo">
+        <a href="./index.html#" class="footer__link--anchor"
+          ><img src="./assets/m2 logo light.png" class="footer__logo--img"
+        /></a>
+      </li>
+      <li class="footer__link">
+        <a
+          href="./index.html#"
+          class="footer__link--anchor"
+          onclick="toggleStoresOn(), togglePlane(), renderStores(), scrollPlane()"
+          >Stores</a
+        >
+      </li>
+      <li class="footer__link">
+        <a href="./form.html" class="footer__link--anchor">Contact Us</a>
+      </li>
     </ul>
+    <p class="footer__copyright">
+      M2 Concepts™
+
+      <a
+        href="https://abdoulaa.github.io/Abdorruhman-E-Portfolio/#"
+        class="footer__copyright--link"
+        target="_blank"
+        >Design by Abdorruhman Abdelwahed</a
+      >
+    </p>
   </footer>
 </html>
