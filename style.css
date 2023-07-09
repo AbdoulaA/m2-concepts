@@ -326,10 +326,10 @@ plane icon
 */
 
 .down {
-  font-size: 32px;
+  font-size: 24px;
   color: #042e7b;
   position: absolute;
-  top: 90vh;
+  top: 87vh;
   left: 50%;
   animation: arrow 1s infinite alternate-reverse;
   z-index: 2;
@@ -477,6 +477,7 @@ join us
     rgba(165, 229, 255, 1) 100%
   ); */
   background-color: #a5e5ff;
+  box-sizing: content-box;
 }
 
 .section__container {
@@ -537,16 +538,26 @@ join us
 
 }
 
-#highlight__wrapper {
+#highlight__section {
+  height: 100vh;
+  width: 100%;
+  background-color: #a5e5ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32px;
+}
+
+.highlight__wrapper {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
   width: 100%;
   max-width: 1200px;
-  min-height: 100vh;
-  height: 100%;
-  padding: 100px;
+  height: 80vh;
+  max-height: 100%;
+  padding: 32px;
   position: relative;
 }
 
@@ -554,10 +565,10 @@ join us
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   width: 33%;
   max-width: 250px;
-  max-height: 300px;
+  max-height: 250px;
   background-color: #042e7b;
   padding: 12px;
   border-radius: 25px;
@@ -625,6 +636,7 @@ join us
   color: white;
   font-size: 40px;
   text-align: center;
+  margin-bottom: 10px;
 }
 
 .career__down {
@@ -664,6 +676,7 @@ Footer
 footer {
   height: 200px;
   padding: 24px;
+  width: 100vw;
   padding-bottom: 0;
   background-color: #042e7b;
   color: white;
@@ -951,12 +964,21 @@ responsive
     translate: 0 20px;
   }
 
+  .highlight {
+    margin: 16px;
+  }
+  
+  #highlight__wrapper {
+    padding: 50px;
+  }
+
 }
 
 @media (max-width: 730px) {
   .about-us__subtitle {
     font-size: 10px;
   }
+  
 }
 
 @media (max-height: 700px) {
@@ -995,6 +1017,8 @@ responsive
     max-height: 100vh;
     top: 2%;
   }
+
+  
 }
 
 @media (max-height: 600px) {

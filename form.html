@@ -24,20 +24,6 @@
           </div>
         </a>
 
-        <a href="./index.html#join-us" class="nav__link">
-          <div class="nav__link--wrapper">
-            <div class="contain">Careers</div>
-          </div>
-        </a>
-        <a
-          href="./index.html#"
-          class="nav__link--logo"
-          onclick="togglePlaneOff()"
-        >
-          <div class="nav__link--wrapper--logo">
-            <img src="./assets/m2 logo light.png" alt="" class="nav__logo" />
-          </div>
-        </a>
         <a
           href="./index.html#"
           class="nav__link"
@@ -47,8 +33,18 @@
             <div class="contain">Stores</div>
           </div>
         </a>
+        <a href="./index.html#" class="nav__link--logo" onclick="togglePlaneOff()">
+          <div class="nav__link--wrapper--logo">
+            <img src="./assets/m2 logo light.png" alt="" class="nav__logo" />
+          </div>
+        </a>
 
-        <a href="#" class="nav__link">
+        <a href="./index.html#join-us" class="nav__link">
+          <div class="nav__link--wrapper">
+            <div class="contain">Careers</div>
+          </div>
+        </a>
+        <a href="./form.html" class="nav__link">
           <div class="nav__link--wrapper">
             <div class="contain">Contact Us</div>
           </div>
@@ -79,7 +75,11 @@
               <textarea type="text" required style="height: 200px"></textarea>
             </div>
             <div class="submit__wrapper">
-                <input type="submit" value="Submit" class="submit__btn submit__btn--contact" />
+              <input
+                type="submit"
+                value="Submit"
+                class="submit__btn submit__btn--contact"
+              />
             </div>
           </form>
         </div>
@@ -115,7 +115,7 @@
                   <input name="last-name" type="text" required />
                 </div>
               </div>
-              
+
               <div class="row">
                 <div class="col-7">
                   <label class="form-label">Email</label>
@@ -150,7 +150,7 @@
                   <input name="zipcode" type="text" placeholder="Zip Code" />
                 </div>
               </div>
-              
+
               <div class="row">
                 <div class="col-3">
                   <label class="form-label">Phone Number</label>
@@ -953,14 +953,7 @@
           >About Us</a
         >
       </li>
-      <li class="footer__link">
-        <a href="./index.html#join-us" class="footer__link--anchor">Careers</a>
-      </li>
-      <li class="footer__link footer__logo">
-        <a href="./index.html#" class="footer__link--anchor"
-          ><img src="./assets/m2 logo light.png" class="footer__logo--img"
-        /></a>
-      </li>
+      
       <li class="footer__link">
         <a
           href="./index.html#"
@@ -968,6 +961,14 @@
           onclick="toggleStoresOn(), togglePlane(), renderStores(), scrollPlane()"
           >Stores</a
         >
+      </li>
+      <li class="footer__link footer__logo">
+        <a href="./index.html#" class="footer__link--anchor"
+          ><img src="./assets/m2 logo light.png" class="footer__logo--img"
+        /></a>
+      </li>
+      <li class="footer__link">
+        <a href="./index.html#join-us" class="footer__link--anchor">Careers</a>
       </li>
       <li class="footer__link">
         <a href="./form.html" class="footer__link--anchor">Contact Us</a>
