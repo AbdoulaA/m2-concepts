@@ -419,6 +419,14 @@ footer {
   font-size: 12px;
 }
 
+@media (max-width: 800px) {
+    nav {
+        scale: 0.7;
+        top: -15px;
+        left: -15%;
+      }
+}
+
 @media (max-width: 600px) {
   .section-outline {
     padding: 0;
