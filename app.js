@@ -125,7 +125,7 @@ function isoStore(event) {
         ${storesList[id].name}
         </div>
         <div class = "store__apply">
-            <a href="./form.html" class= "store__apply--link">
+            <a href="./form.html#form__container" class= "store__apply--link">
             Apply Now!
             </a>
         </div>
