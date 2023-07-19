@@ -273,6 +273,10 @@ Header
   text-align: center;
 }
 
+.m2 {
+  font-size: inherit;
+}
+
 .header__subtitle {
   font-size: 24px;
   text-align: center;
