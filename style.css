@@ -73,13 +73,13 @@ nav {
 }
 
 .nav__link {
-  background-color: #042e7b;
+  background-color: black;
   border-radius: 0 0 10px 10px;
   margin: 0 10px;
   max-height: 65px;
 }
 .nav__link--logo {
-  background-color: #042e7b;
+  background-color: black;
   border-radius: 0 0 10px 10px;
   margin: 0 10px;
 }
@@ -89,14 +89,14 @@ nav {
 }
 
 .nav__link--wrapper {
-  background-color: #042e7b;
+  background-color: black;
   border: white 3px solid;
   margin: 10px;
   padding: 10px;
   border-radius: 10px;
 }
 .nav__link--wrapper--logo {
-  background-color: #042e7b;
+  background-color: black;
   border: white 3px solid;
   margin: 10px;
   padding: 10px;
@@ -166,7 +166,7 @@ plane
 }
 
 .store__name {
-  color: #042e7b;
+  color: black;
   font-weight: bold;
   font-size: 24px;
 }
@@ -175,7 +175,7 @@ plane
   font-weight: bold;
   font-size: 12px;
   padding: 8px;
-  background-color: #042e7b;
+  background-color: black;
   border-radius: 10px;
   height: 50px;
   transition: all 200ms ease;
@@ -238,7 +238,7 @@ Header
   top: 50vh;
   left: 50%;
   translate: -50% -50%;
-  background-color: #042e7b;
+  background-color: black;
   padding: 24px;
   border-radius: 25px;
   opacity: 1;
@@ -256,7 +256,7 @@ Header
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #042e7b;
+  background-color: black;
   color: white;
   padding: 24px;
   border: white 5px solid;
@@ -327,7 +327,7 @@ plane icon
 
 .down {
   font-size: 24px;
-  color: #042e7b;
+  color: black;
   position: absolute;
   top: 87vh;
   left: 50%;
@@ -376,7 +376,7 @@ about us
 }
 
 .about-us__container {
-  background-color: #042e7b;
+  background-color: black;
   padding: 32px;
   display: flex;
   min-width: 70vw;
@@ -390,7 +390,7 @@ about us
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #042e7b;
+  background-color: black;
   color: white;
   padding: 24px;
   border: white 5px solid;
@@ -498,7 +498,7 @@ join us
   max-width: 70vw;
   margin: 56px;
   height: 70vh;
-  background-color: #042e7b;
+  background-color: black;
   padding: 24px;
   border-radius: 20px;
 }
@@ -569,7 +569,7 @@ join us
   width: 33%;
   max-width: 250px;
   max-height: 250px;
-  background-color: #042e7b;
+  background-color: black;
   padding: 12px;
   border-radius: 25px;
   margin: 20px 40px;
@@ -591,7 +591,7 @@ join us
 }
 
 .highlight__container {
-  background-color: #042e7b;
+  background-color: black;
   border: white 5px solid;
   border-radius: 25px;
   height: 100%;
@@ -641,7 +641,7 @@ join us
 
 .career__down {
   font-size: 32px;
-  color: #042e7b;
+  color: black;
   position: absolute;
   bottom: 10%;
   left: 50%;
@@ -678,7 +678,7 @@ footer {
   padding: 24px;
   width: 100vw;
   padding-bottom: 0;
-  background-color: #042e7b;
+  background-color: black;
   color: white;
   display: flex;
   flex-direction: column;
@@ -732,7 +732,7 @@ footer {
   justify-content: center;
   font-weight: normal;
   color: #889dc5;
-  background-color: #042e7b;
+  background-color: black;
   height: 100%;
   margin-top: 16px;
   
