@@ -123,7 +123,7 @@ plane
 
 #plane {
   height: 100%;
-  min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -311,8 +311,8 @@ Header
 
 #bg__img {
   position: absolute;
-  top: -50%;
-  max-height: 100vh;
+  top: 0;
+  height: 100dvh;
   z-index: -3;
   transition: all 700ms ease;
 }
@@ -371,7 +371,7 @@ about us
     rgba(0, 212, 255, 1) 100%
   );
 
-  min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -485,7 +485,7 @@ join us
 }
 
 .section__container {
-  height: 100vh;
+  height: 100dvh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -543,7 +543,7 @@ join us
 }
 
 #highlight__section {
-  height: 100vh;
+  height: 100dvh;
   width: 100%;
   background-color: #a5e5ff;
   display: flex;
@@ -775,6 +775,10 @@ responsive
     bottom: 0;
   }
 
+  #plane {
+    translate: 1000px -5000px;
+  }
+
 }
 
 @media (max-width: 2000px) {
@@ -786,12 +790,12 @@ responsive
     translate: none;
   }
   .section__container {
-    height: 100vh;
+    height: 100dvh;
     z-index: 20;
   }
 
   #highlight__wrapper {
-    min-height: 100vh;
+    min-height: 100dvh;
   }
 
   .career__down {
@@ -841,11 +845,15 @@ responsive
   }
 
   .about-us__subtitle {
-    font-size: 12px;
+    font-size: 16px;
   }
 
   .header__title {
     margin-bottom: 16px;
+  }
+
+  .section__subtitle {
+    font-size: 16px;
   }
 
   nav {
@@ -945,10 +953,7 @@ responsive
 
 
 @media (max-height: 1000px) {
-  #bg__img {
-    top: 0%;
-    max-height: 100vh;
-  }
+  
 
   .section__title {
     font-size: 32px;
@@ -1022,12 +1027,7 @@ responsive
     border-width: 3px;
   }
 
-  #bg__img {
-    max-width: none;
-    max-height: 100vh;
-    top: 2%;
-  }
-
+ 
   
 }
 

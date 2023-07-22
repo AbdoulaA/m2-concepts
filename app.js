@@ -89,6 +89,26 @@ let storesList = [
     id: 6,
     url: "./assets/blue logo.png",
   },
+  {
+    name: "Music Row",
+    id: 7,
+    url: "./assets/music row logo.png",
+  },
+  {
+    name: "Passyunk Steaks",
+    id: 8,
+    url: "./assets/passyunk logo.png",
+  },
+  {
+    name: "Settebello",
+    id: 9,
+    url: "./assets/settebello logo.png",
+  },
+  {
+    name: "Tennessee Rickhouse Whiskey Bar",
+    id: 10,
+    url: "./assets/tennessee bar logo.png",
+  },
 ];
 
 function renderStores() {
