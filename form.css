@@ -236,6 +236,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   align-items: center;
   padding: 16px;
   line-height: 0.7;
+
 }
 
 .submit__btn--contact {
@@ -245,9 +246,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .submit__btn:hover {
-  scale: 1.1;
+  scale: 1.01;
   text-shadow: rgb(216, 247, 255) 1px 0 10px;
   box-shadow: rgb(216, 247, 255) 1px 0 10px;
+  background-color: #40aa3e;
+
 }
 
 /* 
@@ -283,6 +286,10 @@ contact us
   flex-direction: column;
   align-items: center;
   width: 100%;
+}
+
+.borm__title {
+  color: #40aa3e;
 }
 
 #text-form {
@@ -418,6 +425,7 @@ footer {
   color: #889dc5;
   font-size: 12px;
 }
+
 
 @media (max-width: 800px) {
     nav {

@@ -195,7 +195,7 @@ plane
 .store__apply:hover {
   text-shadow: rgb(216, 247, 255) 1px 0 10px;
   scale: 1.1;
-
+  background-color: #40aa3e;
 }
 .store__apply:hover .store__apply--link {
   box-shadow: rgb(216, 247, 255) 1px 0 10px;
@@ -261,6 +261,7 @@ Header
   padding: 24px;
   border: white 5px solid;
   border-radius: 25px;
+  margin-bottom: 15px;
 }
 
 
@@ -287,26 +288,58 @@ Header
   max-width: 200px;
 }
 
-.header__sign--logos {
+#header__sign--logos {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
 
-.dfw:hover {
+.DFW:hover {
   content: url(./assets/dfw\ logo\ glow.png);
 }
-.iah:hover {
+.IAH:hover {
   content: url(./assets/iah\ logo\ glow.png);
 }
-.sat:hover {
+.SAT:hover {
   content: url(./assets/sat\ logo\ glow.png);
+}
+.MSP:hover {
+  content: url(./assets/msp\ logo\ glow.png);
+}
+.BNA:hover {
+  content: url(./assets/bna\ logo\ glow.png);
+}
+.PHL:hover {
+  content: url(./assets/phl\ logo\ glow.png);
+}
+.DCAIAD:hover {
+  content: url(./assets/dca\ iad\ logo\ glow.png);
+}
+.DEN:hover {
+  content: url(./assets/den\ logo\ glow.png);
+}
+.MCO:hover {
+  content: url(./assets/mco\ logo\ glow.png);
+}
+.LGA:hover {
+  content: url(./assets/lga\ logo\ glow.png);
 }
 
 .header__sign {
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+.arrow {
+  font-size: 50px; 
+  color :#40aa3e;
+  transition: all 200ms ease;
+}
+
+.arrow:hover {
+  scale: 1.2;
 }
 
 #bg__img {
@@ -331,7 +364,7 @@ plane icon
 
 .down {
   font-size: 24px;
-  color: black;
+  color: #40aa3e;
   position: absolute;
   top: 87vh;
   left: 50%;
@@ -534,11 +567,12 @@ join us
 
 .subtitle__link {
   margin-top: 0;
+  color: #40aa3e;
 }
 
 .subtitle__link:hover {
   scale: 1.1;
-  text-shadow: rgb(216, 247, 255) 1px 0 10px;
+  text-shadow: #3be738 1px 0 10px;
 
 }
 
@@ -635,7 +669,7 @@ join us
 }
 
 .career {
-  color: white;
+  color: #40aa3e;
   font-size: 40px;
   text-align: center;
   margin-bottom: 10px;

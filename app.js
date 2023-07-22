@@ -13,15 +13,14 @@ function togglePlane() {
 }
 
 function togglePlaneForm() {
-    let plane = document.getElementById("plane");
-    let header = document.getElementById("header");
-    let bg = document.getElementById("bg__img");
-  
-    bg.classList.toggle("move__bg");
-    header.classList.toggle("hide__header");
-    plane.classList.toggle("hide__plane");
-  }
-  
+  let plane = document.getElementById("plane");
+  let header = document.getElementById("header");
+  let bg = document.getElementById("bg__img");
+
+  bg.classList.toggle("move__bg");
+  header.classList.toggle("hide__header");
+  plane.classList.toggle("hide__plane");
+}
 
 function toggleStoresOn() {
   let plane = document.getElementById("plane");
@@ -111,6 +110,89 @@ let storesList = [
   },
 ];
 
+let airportList = [
+  {
+    name: "DFW",
+    id: 0,
+    src: "./assets/dfw logo.png",
+    glow: "./assets/dfw logo glow.png",
+    url: "https://www.dfwairport.com/"
+
+  },
+
+  {
+    name: "IAH",
+    id: 1,
+    src: "./assets/iah logo.png",
+    glow: "./assets/iah logo glow.png",
+    url: "https://www.fly2houston.com/iah/overview"
+  },
+
+  {
+    name: "SAT",
+    id: 2,
+    src: "./assets/sat logo.png",
+    glow: "./assets/sat logo glow.png",
+    url: "https://flysanantonio.com/"
+  },
+
+  {
+    name: "MSP",
+    id: 3,
+    src: "./assets/msp logo.png",
+    glow: "./assets/msp logo glow.png",
+    url: "https://www.mspairport.com/"
+  },
+
+  {
+    name: "BNA",
+    id: 4,
+    src: "./assets/bna logo.png",
+    glow: "./assets/bna logo glow.png",
+    url: "https://flynashville.com/"
+  },
+
+  {
+    name: "PHL",
+    id: 5,
+    src: "./assets/phl logo.png",
+    glow: "./assets/phl logo glow.png",
+    url: "https://www.phl.org/"
+  },
+
+  {
+    name: "DCAIAD",
+    id: 6,
+    src: "./assets/dca iad logo.png",
+    glow: "./assets/dca iad logo glow.png",
+    url: "https://www.mwaa.com/"
+  },
+
+  {
+    name: "DEN",
+    id: 7,
+    src: "./assets/den logo.png",
+    glow: "./assets/den logo glow.png",
+    url: "https://www.flydenver.com/"
+  },
+
+  {
+    name: "MCO",
+    id: 8,
+    src: "./assets/mco logo.png",
+    glow: "./assets/mco logo glow.png",
+    url: "https://www.orlandoairports.net/"
+  },
+
+  {
+    name: "LGA",
+    id: 9,
+    src: "./assets/lga logo.png",
+    glow: "./assets/lga logo glow.png",
+    url: "https://www.laguardiaairport.com/"
+  },
+];
+
 function renderStores() {
   let stores = document.getElementById("plane__stores");
   storesHtml = ``;
@@ -121,6 +203,99 @@ function renderStores() {
     <img src="${storesList[i].url}" alt="${storesList[i].name}" class="plane__store" id = "${i}" onclick="isoStore(event)" />`;
 
     stores.innerHTML = storesHtml;
+  }
+}
+
+let firstLoad = false
+
+
+function changeAirports() {
+  let airports = document.getElementById("header__sign--logos");
+  airportsHtml = ``;
+  airports.innerHTML = airportsHtml;
+
+  if (firstLoad === true) {
+    for (i = 0; i < 5; i++) {
+      airportsHtml += `
+      <a href="${airportList[i].url}" target="_blank">
+                <img
+                  src="${airportList[i].src}"
+                  alt=""
+                  class="${airportList[i].name} header__sign--logo"
+                  on
+                />
+              </a>
+      `;
+  
+      airports.innerHTML = airportsHtml;
+
+      firstLoad = false
+    }
+  }
+  else {
+    for (i = 5; i < 10; i++) {
+      airportsHtml += `
+      <a href="${airportList[i].url}" target="_blank">
+                <img
+                  src="${airportList[i].src}"
+                  alt=""
+                  class="${airportList[i].name} header__sign--logo"
+                />
+              </a>
+      `;
+  
+      
+      airports.innerHTML = airportsHtml;
+      firstLoad = true
+
+    }
+  }
+
+  
+
+
+}
+
+
+
+// function rightAirports() {
+//   let airports = document.getElementById("header__sign--logos");
+//   airportsHtml = ``;
+//   airports.innerHTML = airportsHtml;
+
+//   for (i = 5; i < 10; i++) {
+//     airportsHtml += `
+//     <a href="${airportList[i].url}" target="_blank">
+//               <img
+//                 src="${airportList[i].src}"
+//                 alt=""
+//                 class="${airportList[i].name} header__sign--logo"
+//               />
+//             </a>
+//     `;
+
+    
+//     airports.innerHTML = airportsHtml;
+//   }
+// }
+window.onload = function renderAirports() {
+  let airports = document.getElementById("header__sign--logos");
+  airportsHtml = ``;
+  airports.innerHTML = airportsHtml;
+
+  for (i = 0; i < 5; i++) {
+    airportsHtml += `
+    <a href="${airportList[i].url}" target="_blank">
+              <img
+                src="${airportList[i].src}"
+                alt=""
+                class="${airportList[i].name} header__sign--logo"
+              />
+            </a>
+    `;
+
+    
+    airports.innerHTML = airportsHtml;
   }
 }
 
@@ -213,14 +388,14 @@ function returnText() {
 }
 
 function scrollPlane() {
-    let header = document.getElementById("header");
+  let header = document.getElementById("header");
 
   var oldScrollY = window.scrollY;
   window.onscroll = function (e) {
     if (oldScrollY < window.scrollY) {
       console.log("Down");
       togglePlaneOff();
-    } 
+    }
     oldScrollY = window.scrollY;
   };
 }
