@@ -2,7 +2,7 @@
   font-family: "halyard-text", sans-serif;
   font-weight: 400;
   font-style: normal;
-
+text-align: center;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -39,6 +39,11 @@ a {
 
   text-decoration: none;
   color: white;
+}
+
+p {
+  color: white;
+  text-align: center;
 }
 
 ul {
@@ -366,7 +371,7 @@ plane icon
   font-size: 24px;
   color: #40aa3e;
   position: absolute;
-  top: 87vh;
+  top: 93vh;
   left: 50%;
   animation: arrow 1s infinite alternate-reverse;
   z-index: 2;
@@ -494,6 +499,94 @@ about us
   scale: 1.2;
   text-shadow: 1px 1px 10px #fff, 1px 1px 10px #ffffff;
 }
+
+
+/* 
+
+
+partners
+
+
+*/
+
+
+#partners {
+  height: 100dvh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 0 16px;
+}
+
+.partners__wrapper {
+  width: 70%;
+  max-height: 80%;
+  background-color: black;
+  padding: 24px;
+  border-radius: 20px;
+
+}
+
+.partners__container {
+  border: white 5px solid;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px;
+}
+
+.partners__title {
+  margin-bottom: 24px;
+  font-size: 32px;
+}
+
+.partners__subtitle {
+  font-size: 24px;
+}
+
+.partners__logo {
+  max-height: 200px;
+}
+
+.bassam {
+  border-radius: 50%;
+  border: white 3px solid;
+  transition: all 200ms ease;
+  max-height: 150px;
+
+
+}
+
+.bassam__name {
+  margin-top: 16px;
+  transition: all 200ms ease;
+
+}
+
+
+.partner__logo:hover .bassam {
+  scale: 1.1;
+  box-shadow: 1px 1px 10px #fff, 1px 1px 10px #ffffff;
+
+}
+.partner__logo:hover .bassam__name {
+  scale: 1.1;
+  text-shadow: 1px 1px 10px #fff, 1px 1px 10px #ffffff;
+
+
+}
+
+.partners__logos {
+  padding: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+
 
 /* 
 
@@ -786,7 +879,7 @@ responsive
 */
 
 @media (max-width: 3000px) {
-  #header, #about-us {
+  #header, #about-us, #partners {
     scale: 1.2;
   }
 
@@ -808,13 +901,13 @@ responsive
   }
 
   #plane {
-    translate: 1000px -5000px;
+    translate: 1000px -1500px;
   }
 
 }
 
 @media (max-width: 2000px) {
-  #header, #about-us {
+  #header, #about-us, #partners {
     scale: 1;
   }
 
@@ -860,6 +953,9 @@ responsive
 
   .highlight {
     margin: 10px 20px;
+  }
+  .partners__subtitle {
+    font-size: 16px;
   }
 }
 
@@ -911,6 +1007,13 @@ responsive
     border-width: 2px;
     max-height: 60px;
   }
+  .partners__subtitle {
+    font-size: 12px;
+  }
+
+  .bassam {
+    max-height: 100px;
+  }
 }
 
 @media (max-width: 900px) {
@@ -923,6 +1026,9 @@ responsive
 }
 
 @media (max-width: 600px) {
+  #header {
+    scale: 0.45;
+  }
   .plane__store {
     max-height: 45px;
   }
@@ -981,7 +1087,27 @@ responsive
     height: fit-content;
   }
 
+  .footer__links {
+    scale: 0.6;
+    translate: -50px 0;
+  }
+
+  nav {
+    scale: 0.5;
+    top: -25px;
+  }
+
+  .nav__link {
+    margin: 0;
+  }
+
+  .bassam {
+    max-height: 75px;
+  }
+
 }
+
+
 
 
 @media (max-height: 1000px) {
@@ -1025,6 +1151,8 @@ responsive
   .about-us__subtitle {
     font-size: 10px;
   }
+
+  
   
 }
 
@@ -1100,5 +1228,13 @@ responsive
   .career__down {
     translate: 0 10px;
     font-size: 10px;
+  }
+
+  .partners__subtitle {
+    font-size: 10px;
+  }
+  
+  .bassam {
+    max-height: 75px;
   }
 }

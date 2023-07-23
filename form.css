@@ -301,17 +301,17 @@ contact us
 }
 
 .down {
-    font-size: 32px;
-    color: black;
-    position: absolute;
-    top: 90vh;
-    left: 50%;
-    animation: arrow 1s infinite alternate-reverse;
-    z-index: 2;
-    rotate: 90deg;
-    transition: all 100ms ease-in-out;
-    text-shadow: rgb(216, 247, 255) 1px 0 10px;
-  }
+  font-size: 24px;
+  color: #40aa3e;
+  position: absolute;
+  top: 87vh;
+  left: 50%;
+  animation: arrow 1s infinite alternate-reverse;
+  z-index: 2;
+  rotate: 90deg;
+  transition: all 100ms ease-in-out;
+  text-shadow: rgb(216, 247, 255) 1px 0 10px;
+}
   
   .down:hover {
     scale: 1.1;
