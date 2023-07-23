@@ -155,7 +155,7 @@ plane
   display: flex;
   justify-content: space-between;
   width: 100%;
-  max-width: 65vw;
+  max-width: 73vw;
   position: absolute;
   top: 43%;
   left: 15%;
@@ -168,6 +168,7 @@ plane
   border: 5px solid #9fa0b1;
   border-radius: 50px;
   transition: all 300ms ease;
+  margin: 16px 0;
 }
 
 .store__name {
@@ -1107,11 +1108,19 @@ responsive
 
 }
 
-
+@media (max-height: 3000px) {
+  #plane__stores {
+    top: 47%;
+    left: 10%;
+  }
+}
 
 
 @media (max-height: 1000px) {
-  
+  #plane__stores {
+    top: 42%;
+    left: 10%;
+  }
 
   .section__title {
     font-size: 32px;
