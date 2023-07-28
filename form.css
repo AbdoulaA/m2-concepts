@@ -311,6 +311,7 @@ contact us
   position: absolute;
   top: 87vh;
   left: 50%;
+  translate: -50% 0;
   animation: arrow 1s infinite alternate-reverse;
   z-index: 2;
   rotate: 90deg;
@@ -482,6 +483,11 @@ footer {
 @media (max-height: 500px) {
     .borm__container {
         scale: 0.5;
+    }
+
+    nav {
+      scale: 0.5;
+      top: -25px;
     }
     
 }

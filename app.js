@@ -57,6 +57,9 @@ let storesList = [
     name: "Chick-Fil-A",
     id: 0,
     url: "./assets/cfa logo.png",
+    airports: [ {
+      
+    }]
   },
   {
     name: "Starbucks",
