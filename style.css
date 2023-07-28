@@ -13,8 +13,12 @@ body {
   background-color: #a5e5ff;
   background-position: 1000 1000px;
   position: relative;
+}
+
+html, body {
   overflow-x: hidden;
 }
+
 
 h1 {
   font-weight: bold;
