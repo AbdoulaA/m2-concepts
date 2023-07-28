@@ -355,7 +355,7 @@ Header
 #bg__img {
   position: absolute;
   top: 0;
-  height: 100dvh;
+  height: 100vh;
   z-index: -3;
   transition: all 700ms ease;
 }
@@ -1091,7 +1091,7 @@ responsive
   }
 
   #highlight__section {
-    height: 1600px;
+    height: 100%;
     display: flex;
     align-items: start;
   }
