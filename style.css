@@ -696,8 +696,7 @@ join us
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 33%;
-  max-width: 250px;
+  width: 30%;
   max-height: 250px;
   background-color: black;
   padding: 12px;
@@ -1157,8 +1156,8 @@ responsive
 }
 
 @media (max-width: 730px) {
-  .about-us__subtitle {
-    font-size: 10px;
+  .about-us__subtitle, .section__subtitle {
+    font-size: 12px;
   }
 
   
