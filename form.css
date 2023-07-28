@@ -155,10 +155,15 @@ section {
 
 .form-section-title {
   margin-bottom: 24px;
+  font-size: 24px;
 }
 
 .form-field-section {
   padding: 16px;
+}
+
+.form-label {
+  font-size: 16px;
 }
 
 .row {
@@ -431,7 +436,7 @@ footer {
     nav {
         scale: 0.7;
         top: -15px;
-        left: -15%;
+        left: 0;
       }
 }
 
@@ -458,6 +463,12 @@ footer {
 
   .footer__links {
     scale: 0.7;
+  }
+
+  nav {
+    scale: 0.5;
+    top: -25px;
+    left: -15%;
   }
 
 }
