@@ -1082,6 +1082,11 @@ responsive
   .headshot {
     scale: 0.5;
   }
+
+  .headshot:hover {
+    scale: 0.6;
+  }
+
   .headshots {
     max-width: 30%;
   }
