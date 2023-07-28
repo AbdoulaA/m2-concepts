@@ -84,7 +84,7 @@ let storesList = [
     url: "./assets/panda express logo.png",
   },
   {
-    name: "Blue Mediterranean Bar",
+    name: "Bleu Mediterranean Bar",
     id: 6,
     url: "./assets/blue logo.png",
   },
@@ -399,3 +399,4 @@ function scrollPlane() {
     oldScrollY = window.scrollY;
   };
 }
+

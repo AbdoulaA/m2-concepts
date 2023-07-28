@@ -227,6 +227,7 @@ plane
 .hide__plane {
   translate: 0px 0px !important;
   overflow: hidden;
+  z-index: -1;
 }
 
 .hide__stores {
@@ -378,7 +379,7 @@ plane icon
   top: 93vh;
   left: 50%;
   animation: arrow 1s infinite alternate-reverse;
-  z-index: 2;
+  z-index: 5;
   rotate: 90deg;
   transition: all 100ms ease-in-out;
   text-shadow: rgb(216, 247, 255) 1px 0 10px;
@@ -1063,7 +1064,7 @@ responsive
 
 @media (max-width: 600px) {
   #header {
-    scale: 0.45;
+    scale: 0.4;
   }
   .plane__store {
     max-height: 45px;
@@ -1079,7 +1080,7 @@ responsive
   }
 
   .about-us__subtitle {
-    font-size: 12px ;
+    font-size: 8px ;
   }
 
   .section__subtitle {
@@ -1108,6 +1109,17 @@ responsive
   .highlight__title {
     translate: 0;
   }
+
+  .highlight__title {
+    font-size: 14px;
+  }
+
+  
+
+  .store__name {
+    font-size: 16px;
+  }
+  
 
   
 
@@ -1142,15 +1154,6 @@ responsive
 }
 
 @media (max-width: 500px) {
-  .highlight__title {
-    font-size: 14px;
-  }
-
-  
-
-  .store__name {
-    font-size: 16px;
-  }
   
 }
 
@@ -1200,7 +1203,7 @@ responsive
 
 @media (max-width: 730px) {
   .about-us__subtitle {
-    font-size: 12px;
+    font-size: 0.7rem;
   }
 }
 
