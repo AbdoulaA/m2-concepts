@@ -300,6 +300,8 @@ Header
 
 .header__sign--logo {
   max-width: 200px;
+  background-image: url(./assets/placeholder\ img.png);
+  background-size: 200px;
 }
 
 #header__sign--logos {
@@ -1215,12 +1217,7 @@ responsive
 }
 
 @media (max-height: 700px) {
-  #header {
-    min-width: 80vw;
-    padding: 16px;
-    scale: 0.6;
-  }
-  .about-us__container,
+ 
   span {
     min-height: none;
     padding: 16px;
@@ -1232,9 +1229,7 @@ responsive
     font-size: 24px;
   }
 
-  .about-us__subtitle {
-    font-size: 16px;
-  }
+  
 
   .header__title {
     margin-bottom: 16px;
@@ -1257,7 +1252,7 @@ responsive
     top: -20px;
   }
 
-  .about-us__container,
+  
   span {
     scale: 0.7;
   }

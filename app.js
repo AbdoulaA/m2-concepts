@@ -58,7 +58,7 @@ let storesList = [
     id: 0,
     url: "./assets/cfa logo.png",
     airports: [ {
-      
+
     }]
   },
   {
@@ -111,6 +111,12 @@ let storesList = [
     id: 10,
     url: "./assets/tennessee bar logo.png",
   },
+  {
+    name: "Nashville Predators Bar",
+    id: 11,
+    url: "./assets/tennessee bar logo.png",
+  },
+  
 ];
 
 let airportList = [
@@ -203,7 +209,7 @@ function renderStores() {
 
   for (i = 0; i < storesList.length; i++) {
     storesHtml += `
-    <img src="${storesList[i].url}" alt="${storesList[i].name}" class="plane__store" id = "${i}" onclick="isoStore(event)" />`;
+    <img src="${storesList[i].url}" alt="${storesList[i].name}" loading="lazy" class="plane__store" id = "${i}" onclick="isoStore(event)" />`;
 
     stores.innerHTML = storesHtml;
   }
@@ -224,6 +230,7 @@ function changeAirports() {
                 <img
                   src="${airportList[i].src}"
                   alt=""
+                  loading="lazy"
                   class="${airportList[i].name} header__sign--logo"
                   on
                 />
