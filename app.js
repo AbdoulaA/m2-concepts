@@ -240,7 +240,7 @@ function renderStores() {
   storesHtml = ``;
   stores.innerHTML = storesHtml;
 
-  for (i = 0; i < 19; i++) {
+  for (i = 0; i < 10; i++) {
     storesHtml += `
     <img src="${storesList[i].url}" alt="${storesList[i].name}" loading="lazy" class="plane__store" id = "${i}" onclick="isoStore(event)" />`;
 
@@ -248,31 +248,31 @@ function renderStores() {
   }
 }
 
-// function changeStores() {
-//   let stores = document.getElementById("plane__stores");
-//   storesHtml = ``;
-//   stores.innerHTML = storesHtml;
+function changeStores() {
+  let stores = document.getElementById("plane__stores");
+  storesHtml = ``;
+  stores.innerHTML = storesHtml;
 
-//   if (firstLoad === true) {
-//     for (i = 0; i < 10; i++) {
-//       storesHtml += `
-//       <img src="${storesList[i].url}" alt="${storesList[i].name}" loading="lazy" class="plane__store" id = "${i}" onclick="isoStore(event)" />`;
+  if (firstLoad === true) {
+    for (i = 0; i < 10; i++) {
+      storesHtml += `
+      <img src="${storesList[i].url}" alt="${storesList[i].name}" loading="lazy" class="plane__store" id = "${i}" onclick="isoStore(event)" />`;
 
-//       stores.innerHTML = storesHtml;
-//       firstLoad = false;
+      stores.innerHTML = storesHtml;
+      firstLoad = false;
 
-//     }
-//   } else {
-//     for (i = 9; i < 19; i++) {
-//       storesHtml += `
-//       <img src="${storesList[i].url}" alt="${storesList[i].name}" loading="lazy" class="plane__store" id = "${i}" onclick="isoStore(event)" />`;
+    }
+  } else {
+    for (i = 9; i < 19; i++) {
+      storesHtml += `
+      <img src="${storesList[i].url}" alt="${storesList[i].name}" loading="lazy" class="plane__store" id = "${i}" onclick="isoStore(event)" />`;
 
-//       stores.innerHTML = storesHtml;
-//       firstLoad = true;
+      stores.innerHTML = storesHtml;
+      firstLoad = true;
 
-//     }
-//   }
-// }
+    }
+  }
+}
 
 function changeAirports() {
   let airports = document.getElementById("header__sign--logos");
