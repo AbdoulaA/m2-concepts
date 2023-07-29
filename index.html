@@ -41,7 +41,12 @@
         </a> -->
         <a href="#" class="nav__link--logo" onclick="togglePlaneOff()">
           <div class="nav__link--wrapper--logo">
-            <img src="./assets/m2 logo light.png" loading="lazy" alt="" class="nav__logo" />
+            <img
+              src="./assets/m2 logo light.png"
+              loading="lazy"
+              alt=""
+              class="nav__logo"
+            />
           </div>
         </a>
 
@@ -69,19 +74,38 @@
   <body>
     <section id="plane">
       <div class="container plane__container">
-        <img src="./assets/plane.png" loading="lazy" alt="" class="plane__img" />
+        <img
+          src="./assets/plane.png"
+          loading="lazy"
+          alt=""
+          class="plane__img"
+        />
       </div>
 
-      <div id="plane__stores">
-        <a href="" class="plane__link"></a>
-        <img
-          src="./assets/cfa logo.png"
-          alt=""
-          class="plane__store"
-          id=""
-          loading="lazy"
-          onclick="isoStore(event)"
-        />
+      <div class="arrow__stores">
+        <!-- <h1 class="store__arrow--left">
+          <i
+            class="fa-solid fa-arrow-left "
+            onclick="changeStores()"
+          ></i>
+        </h1> -->
+        <div id="plane__stores">
+          <a href="" class="plane__link"></a>
+          <img
+            src="./assets/cfa logo.png"
+            alt=""
+            class="plane__store"
+            id=""
+            loading="lazy"
+            onclick="isoStore(event)"
+          />
+        </div>
+        <!-- <h1 class="store__arrow--right">
+          <i
+            class="fa-solid fa-arrow-right "
+            onclick="changeStores()"
+          ></i>
+        </h1> -->
       </div>
     </section>
 
@@ -113,7 +137,6 @@
           <div id="header__sign--logos">
             <a href="https://www.dfwairport.com/" target="_blank">
               <img
-              
                 src="./assets/dfw logo.png"
                 alt=""
                 class="header__sign--logo"
@@ -128,7 +151,12 @@
       </section>
 
       <div class="container">
-        <img src="./assets/background img.png" alt="" loading="lazy" id="bg__img" />
+        <img
+          src="./assets/background img.png"
+          alt=""
+          loading="lazy"
+          id="bg__img"
+        />
       </div>
       <a href="#about-us" class="down__link" onclick="togglePlaneOff()">
         <i class="fa-solid fa-plane down"></i>

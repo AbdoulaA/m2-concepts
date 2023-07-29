@@ -57,9 +57,7 @@ let storesList = [
     name: "Chick-Fil-A",
     id: 0,
     url: "./assets/cfa logo.png",
-    airports: [ {
-
-    }]
+    airports: [{}],
   },
   {
     name: "Starbucks",
@@ -114,9 +112,43 @@ let storesList = [
   {
     name: "Nashville Predators Bar",
     id: 11,
-    url: "./assets/tennessee bar logo.png",
+    url: "./assets/nashville bar logo.png",
   },
-  
+  {
+    name: "Little Harpeth Brewery",
+    id: 12,
+    url: "./assets/harpeth logo.png",
+  },
+  {
+    name: "Air Essentials",
+    id: 13,
+    url: "./assets/air essentials logo.png",
+  },
+  {
+    name: "Pinkberry",
+    id: 14,
+    url: "./assets/pinkberry logo.png",
+  },
+  {
+    name: "Smoothie King",
+    id: 15,
+    url: "./assets/smoothie king logo.png",
+  },
+  {
+    name: "Brewed Restaurant",
+    id: 16,
+    url: "./assets/brewed logo.png",
+  },
+  {
+    name: "Plaza Premium Group",
+    id: 17,
+    url: "./assets/plaza premium logo.png",
+  },
+  {
+    name: "Tagliare Pizza",
+    id: 18,
+    url: "./assets/tagliare logo.png",
+  },
 ];
 
 let airportList = [
@@ -125,8 +157,7 @@ let airportList = [
     id: 0,
     src: "./assets/dfw logo.png",
     glow: "./assets/dfw logo glow.png",
-    url: "https://www.dfwairport.com/"
-
+    url: "https://www.dfwairport.com/",
   },
 
   {
@@ -134,7 +165,7 @@ let airportList = [
     id: 1,
     src: "./assets/iah logo.png",
     glow: "./assets/iah logo glow.png",
-    url: "https://www.fly2houston.com/iah/overview"
+    url: "https://www.fly2houston.com/iah/overview",
   },
 
   {
@@ -142,7 +173,7 @@ let airportList = [
     id: 2,
     src: "./assets/sat logo.png",
     glow: "./assets/sat logo glow.png",
-    url: "https://flysanantonio.com/"
+    url: "https://flysanantonio.com/",
   },
 
   {
@@ -150,7 +181,7 @@ let airportList = [
     id: 3,
     src: "./assets/msp logo.png",
     glow: "./assets/msp logo glow.png",
-    url: "https://www.mspairport.com/"
+    url: "https://www.mspairport.com/",
   },
 
   {
@@ -158,7 +189,7 @@ let airportList = [
     id: 4,
     src: "./assets/bna logo.png",
     glow: "./assets/bna logo glow.png",
-    url: "https://flynashville.com/"
+    url: "https://flynashville.com/",
   },
 
   {
@@ -166,7 +197,7 @@ let airportList = [
     id: 5,
     src: "./assets/phl logo.png",
     glow: "./assets/phl logo glow.png",
-    url: "https://www.phl.org/"
+    url: "https://www.phl.org/",
   },
 
   {
@@ -174,7 +205,7 @@ let airportList = [
     id: 6,
     src: "./assets/dca iad logo.png",
     glow: "./assets/dca iad logo glow.png",
-    url: "https://www.mwaa.com/"
+    url: "https://www.mwaa.com/",
   },
 
   {
@@ -182,7 +213,7 @@ let airportList = [
     id: 7,
     src: "./assets/den logo.png",
     glow: "./assets/den logo glow.png",
-    url: "https://www.flydenver.com/"
+    url: "https://www.flydenver.com/",
   },
 
   {
@@ -190,7 +221,7 @@ let airportList = [
     id: 8,
     src: "./assets/mco logo.png",
     glow: "./assets/mco logo glow.png",
-    url: "https://www.orlandoairports.net/"
+    url: "https://www.orlandoairports.net/",
   },
 
   {
@@ -198,16 +229,18 @@ let airportList = [
     id: 9,
     src: "./assets/lga logo.png",
     glow: "./assets/lga logo glow.png",
-    url: "https://www.laguardiaairport.com/"
+    url: "https://www.laguardiaairport.com/",
   },
 ];
+
+let firstLoad = false;
 
 function renderStores() {
   let stores = document.getElementById("plane__stores");
   storesHtml = ``;
   stores.innerHTML = storesHtml;
 
-  for (i = 0; i < storesList.length; i++) {
+  for (i = 0; i < 19; i++) {
     storesHtml += `
     <img src="${storesList[i].url}" alt="${storesList[i].name}" loading="lazy" class="plane__store" id = "${i}" onclick="isoStore(event)" />`;
 
@@ -215,8 +248,31 @@ function renderStores() {
   }
 }
 
-let firstLoad = false
+// function changeStores() {
+//   let stores = document.getElementById("plane__stores");
+//   storesHtml = ``;
+//   stores.innerHTML = storesHtml;
 
+//   if (firstLoad === true) {
+//     for (i = 0; i < 10; i++) {
+//       storesHtml += `
+//       <img src="${storesList[i].url}" alt="${storesList[i].name}" loading="lazy" class="plane__store" id = "${i}" onclick="isoStore(event)" />`;
+
+//       stores.innerHTML = storesHtml;
+//       firstLoad = false;
+
+//     }
+//   } else {
+//     for (i = 9; i < 19; i++) {
+//       storesHtml += `
+//       <img src="${storesList[i].url}" alt="${storesList[i].name}" loading="lazy" class="plane__store" id = "${i}" onclick="isoStore(event)" />`;
+
+//       stores.innerHTML = storesHtml;
+//       firstLoad = true;
+
+//     }
+//   }
+// }
 
 function changeAirports() {
   let airports = document.getElementById("header__sign--logos");
@@ -228,7 +284,7 @@ function changeAirports() {
       airportsHtml += `
       <a href="${airportList[i].url}" target="_blank">
                 <img
-                  src="${airportList[i].src}"
+                  src="${airportList[i].glow}"
                   alt=""
                   loading="lazy"
                   class="${airportList[i].name} header__sign--logo"
@@ -236,13 +292,12 @@ function changeAirports() {
                 />
               </a>
       `;
-  
+
       airports.innerHTML = airportsHtml;
 
-      firstLoad = false
+      firstLoad = false;
     }
-  }
-  else {
+  } else {
     for (i = 5; i < 10; i++) {
       airportsHtml += `
       <a href="${airportList[i].url}" target="_blank">
@@ -253,20 +308,12 @@ function changeAirports() {
                 />
               </a>
       `;
-  
-      
-      airports.innerHTML = airportsHtml;
-      firstLoad = true
 
+      airports.innerHTML = airportsHtml;
+      firstLoad = true;
     }
   }
-
-  
-
-
 }
-
-
 
 // function rightAirports() {
 //   let airports = document.getElementById("header__sign--logos");
@@ -284,7 +331,6 @@ function changeAirports() {
 //             </a>
 //     `;
 
-    
 //     airports.innerHTML = airportsHtml;
 //   }
 // }
@@ -304,10 +350,9 @@ window.onload = function renderAirports() {
             </a>
     `;
 
-    
     airports.innerHTML = airportsHtml;
   }
-}
+};
 
 function isoStore(event) {
   let stores = document.getElementById("plane__stores");
@@ -409,4 +454,3 @@ function scrollPlane() {
     oldScrollY = window.scrollY;
   };
 }
-
