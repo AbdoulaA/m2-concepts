@@ -52,105 +52,6 @@ function togglePlaneOn() {
   plane.classList.add("hide__plane");
 }
 
-let storesList = [
-  {
-    name: "Chick-Fil-A",
-    id: 0,
-    url: "./assets/cfa logo.png",
-    airports: [{}],
-  },
-  {
-    name: "Starbucks",
-    id: 1,
-    url: "./assets/starbucks logo.png",
-  },
-  {
-    name: "Coffee and Bagels",
-    id: 5,
-    url: "./assets/coffee and bagels.png",
-  },
-  {
-    name: "Qdoba Mexican Eats",
-    id: 3,
-    url: "./assets/qdoba logo.png",
-  },
-  {
-    name: "NewsLink",
-    id: 4,
-    url: "./assets/newslink logo.png",
-  },
-  {
-    name: "Panda Express",
-    id: 2,
-    url: "./assets/panda express logo.png",
-  },
-  {
-    name: "Bleu Mediterranean Bar",
-    id: 6,
-    url: "./assets/blue logo.png",
-  },
-  {
-    name: "Music Row",
-    id: 7,
-    url: "./assets/music row logo.png",
-  },
-  {
-    name: "Passyunk Steaks",
-    id: 8,
-    url: "./assets/passyunk logo.png",
-  },
-  {
-    name: "Settebello",
-    id: 9,
-    url: "./assets/settebello logo.png",
-  },
-  {
-    name: "Tennessee Rickhouse Whiskey Bar",
-    id: 10,
-    url: "./assets/tennessee bar logo.png",
-  },
-  {
-    name: "Nashville Predators Bar",
-    id: 11,
-    url: "./assets/nashville bar logo.png",
-  },
-  {
-    name: "Little Harpeth Brewery",
-    id: 12,
-    url: "./assets/harpeth logo.png",
-  },
-  {
-    name: "Air Essentials",
-    id: 13,
-    url: "./assets/air essentials logo.png",
-  },
-  {
-    name: "Pinkberry",
-    id: 14,
-    url: "./assets/pinkberry logo.png",
-  },
-  {
-    name: "Smoothie King",
-    id: 15,
-    url: "./assets/smoothie king logo.png",
-  },
-  {
-    name: "Brewed Restaurant",
-    id: 16,
-    url: "./assets/brewed logo.png",
-  },
-  {
-    name: "Plaza Premium Group",
-    id: 17,
-    url: "./assets/plaza premium logo.png",
-  },
-  {
-    name: "Tagliare Pizza",
-    id: 18,
-    url: "./assets/tagliare logo.png",
-  },
-];
-
 let airportList = [
   {
     name: "DFW",
@@ -233,6 +134,123 @@ let airportList = [
   },
 ];
 
+let storesList = [
+  {
+    name: "Chick-Fil-A",
+    id: 0,
+    url: "./assets/cfa logo.png",
+    airports: [airportList[0].name, airportList[5].name],
+  },
+  {
+    name: "Starbucks",
+    id: 1,
+    url: "./assets/starbucks logo.png",
+    airports: [airportList[0].name],
+  },
+  {
+    name: "Coffee and Bagels",
+    id: 5,
+    url: "./assets/coffee and bagels.png",
+    airports: [airportList[0].name],
+  },
+  {
+    name: "Qdoba Mexican Eats",
+    id: 3,
+    url: "./assets/qdoba logo.png",
+    airports: [airportList[0].name],
+  },
+  {
+    name: "NewsLink",
+    id: 4,
+    url: "./assets/newslink logo.png",
+    airports: [airportList[4].name, airportList[0].name],
+  },
+  {
+    name: "Panda Express",
+    id: 2,
+    url: "./assets/panda express logo.png",
+    airports: [airportList[0].name],
+  },
+  {
+    name: "Bleu Mediterranean Bar",
+    id: 6,
+    url: "./assets/blue logo.png",
+    airports: [airportList[0].name],
+  },
+  {
+    name: "Music Row",
+    id: 7,
+    url: "./assets/music row logo.png",
+    airports: [airportList[4].name],
+  },
+  {
+    name: "Passyunk Steaks",
+    id: 8,
+    url: "./assets/passyunk logo.png",
+    airports: [airportList[5].name],
+  },
+  {
+    name: "Settebello",
+    id: 9,
+    url: "./assets/settebello logo.png",
+    airports: [airportList[3].name],
+  },
+  {
+    name: "Tennessee Rickhouse Whiskey Bar",
+    id: 10,
+    url: "./assets/tennessee bar logo.png",
+    airports: [airportList[4].name],
+  },
+  {
+    name: "Nashville Predators Bar",
+    id: 11,
+    url: "./assets/nashville bar logo.png",
+    airports: [airportList[4].name],
+  },
+  {
+    name: "Little Harpeth Brewery",
+    id: 12,
+    url: "./assets/harpeth logo.png",
+    airports: [airportList[4].name],
+  },
+  {
+    name: "Air Essentials",
+    id: 13,
+    url: "./assets/air essentials logo.png",
+    airports: [airportList[4].name],
+  },
+  {
+    name: "Pinkberry",
+    id: 14,
+    url: "./assets/pinkberry logo.png",
+    airports: [airportList[0].name],
+  },
+  {
+    name: "Smoothie King",
+    id: 15,
+    url: "./assets/smoothie king logo.png",
+    airports: [airportList[0].name],
+  },
+  {
+    name: "Brewed Restaurant",
+    id: 16,
+    url: "./assets/brewed logo.png",
+    airports: [airportList[0].name],
+  },
+  {
+    name: "Plaza Premium Group",
+    id: 17,
+    url: "./assets/plaza premium logo.png",
+    airports: [airportList[0].name],
+  },
+  {
+    name: "Tagliare Pizza",
+    id: 18,
+    url: "./assets/tagliare logo.png",
+    airports: [airportList[5].name],
+  },
+];
+
 let firstLoad = false;
 
 function renderStores() {
@@ -240,7 +258,7 @@ function renderStores() {
   storesHtml = ``;
   stores.innerHTML = storesHtml;
 
-  for (i = 0; i < 19; i++) {
+  for (i = 0; i < 10; i++) {
     storesHtml += `
     <img src="${storesList[i].url}" alt="${storesList[i].name}" loading="lazy" class="plane__store" id = "${i}" onclick="isoStore(event)" />`;
 
@@ -248,31 +266,29 @@ function renderStores() {
   }
 }
 
-// function changeStores() {
-//   let stores = document.getElementById("plane__stores");
-//   storesHtml = ``;
-//   stores.innerHTML = storesHtml;
+function changeStores() {
+  let stores = document.getElementById("plane__stores");
+  storesHtml = ``;
+  stores.innerHTML = storesHtml;
 
-//   if (firstLoad === true) {
-//     for (i = 0; i < 10; i++) {
-//       storesHtml += `
-//       <img src="${storesList[i].url}" alt="${storesList[i].name}" loading="lazy" class="plane__store" id = "${i}" onclick="isoStore(event)" />`;
+  if (firstLoad === true) {
+    for (i = 0; i < 10; i++) {
+      storesHtml += `
+      <img src="${storesList[i].url}" alt="${storesList[i].name}" loading="lazy" class="plane__store" id = "${i}" onclick="isoStore(event)" />`;
 
-//       stores.innerHTML = storesHtml;
-//       firstLoad = false;
+      stores.innerHTML = storesHtml;
+      firstLoad = false;
+    }
+  } else {
+    for (i = 9; i < 19; i++) {
+      storesHtml += `
+      <img src="${storesList[i].url}" alt="${storesList[i].name}" loading="lazy" class="plane__store" id = "${i}" onclick="isoStore(event)" />`;
 
-//     }
-//   } else {
-//     for (i = 9; i < 19; i++) {
-//       storesHtml += `
-//       <img src="${storesList[i].url}" alt="${storesList[i].name}" loading="lazy" class="plane__store" id = "${i}" onclick="isoStore(event)" />`;
-
-//       stores.innerHTML = storesHtml;
-//       firstLoad = true;
-
-//     }
-//   }
-// }
+      stores.innerHTML = storesHtml;
+      firstLoad = true;
+    }
+  }
+}
 
 function changeAirports() {
   let airports = document.getElementById("header__sign--logos");
@@ -374,12 +390,20 @@ function isoStore(event) {
         <div class = "store__name">
         ${storesList[id].name}
         </div>
+        
         <div class = "store__apply">
             <a href="./form.html#form__container" class= "store__apply--link">
             Apply Now!
             </a>
         </div>
-    </div>`;
+       
+    </div>
+    <div class="store__airports">
+      <h3 style="color: black;"><br>Airports:</h3>
+      <img src="./assets/${storesList[id].airports[0]} logo.png" alt="" class="store__airport">
+      <img src="./assets/${storesList[id].airports[1]} logo.png" alt="" class="store__airport">
+    </div>
+    `;
 
     stores.innerHTML = storesHtml;
     areStoresVisible = false;

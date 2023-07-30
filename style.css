@@ -146,7 +146,7 @@ plane
 }
 
 .scale__plane {
-  scale: 1.4;
+  scale: 1.7;
 }
 
 .scale__plane #plane__stores {
@@ -163,7 +163,7 @@ plane
   display: flex;
   justify-content: space-between;
   width: 100%;
-  max-width: 75vw;
+  max-width: 65vw;
   position: absolute;
   top: 43%;
   left: 47%;
@@ -180,6 +180,10 @@ plane
   margin: 16px 0;
 }
 
+
+.store__airport {
+  max-height: 50px;
+}
 
 
 .store__arrow--left {
@@ -251,7 +255,7 @@ plane
 }
 
 .plane__store:hover {
-  scale: 2;
+  scale: 1.2;
 }
 
 .hide__plane {
