@@ -300,7 +300,7 @@ function changeAirports() {
       airportsHtml += `
       <a href="${airportList[i].url}" target="_blank">
                 <img
-                  src="${airportList[i].glow}"
+                  src="${airportList[i].src}"
                   alt=""
                   loading="lazy"
                   class="${airportList[i].name} header__sign--logo"
